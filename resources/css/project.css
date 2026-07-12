@@ -1,0 +1,37 @@
+.p-review-form {
+    /* background-color: #ddd; */
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.p-review-form__title {
+    text-align: center;
+}
+
+.p-review-form__form-content {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-review-form__item-group {
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-review-form__label {
+    /* background-color: red; */
+    align-self: flex-start;
+}
+
+.p-review-form__textarea {}
+
+.p-review-form__button {
+    display: block;
+    margin-inline: auto;
+    margin-top: 2rem;
+}

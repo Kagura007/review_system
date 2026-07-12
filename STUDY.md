@@ -16,3 +16,8 @@ scss/
 │   ├── _dashboard.scss
 │   ├── _review.scss
 │   └── _profile.scss
+
+
+# 次回：口コミ投稿サービスの開発（投稿機能の実装）② から視聴
+
+

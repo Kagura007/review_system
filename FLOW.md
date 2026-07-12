@@ -64,6 +64,24 @@ node v24.16.0
 
 ## Formでの投稿
 
+### HTML用意：form.blade.php
+@csrf を入れる
+
+### Post.php 生成
+php artisan make:model Post -m
+C:\xampp\htdocs\review_system\app\Models\Post.php
+
+### テーブルの構造を指定
+C:\xampp\htdocs\review_system\database\migrations\2026_07_12_152605_create_posts_table.php 
+にテーブル構造やリレーション（外部キー）を指定
+
+php artisan migrate 
+指定したテーブルが生成される
+
+### ※操作を１つ戻す（回数指定をして取り消すこともできる）
+php artisan mitrate:follback
+
+
 ## LaravelでのFormの作成
 
 ## 投稿ページで実装する機能
