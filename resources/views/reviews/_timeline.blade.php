@@ -42,7 +42,12 @@
                             </p>
                             {{-- 評価 --}}
                             <div class="review-star">
-                                {{ $review->evaluation }}
+                                {{-- {{ $review->evaluation }} --}}
+
+                                @for ($i = 1; $i <= $review->evaluation; $i++)
+                                    <img src="{{ asset('images/review_star.png') }}" alt="★"
+                                        class="review-star-image">
+                                @endfor
                             </div>
                         </div>
                     </div>
