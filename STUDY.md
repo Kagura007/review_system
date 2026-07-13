@@ -21,7 +21,7 @@ scss/
 # 次回：口コミ投稿サービスの開発（投稿機能の実装）② から視聴
 
 
-# 2026/07/13  current :,  day 4:40,  total 5:00
+# 2026/07/13  current :,  day 5:00,  total 5:00
 
 ## POST通信で来たリクエストを受け取る
 
@@ -40,3 +40,5 @@ posts.store という名前のルートを探す
 [PostController::class, 'store']
     PostControllerのstoreメソッドを実行
 
+
+# 次回：タイムラインの grid から作業
