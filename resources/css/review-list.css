@@ -25,6 +25,7 @@
     margin-right: auto;
 }
 
+/* 投稿フォームへのリンク */
 .review-list__button {
     background-color: var(--color-primary-dark);
     padding-inline: 0.5rem;
@@ -37,18 +38,92 @@
 
 .timeline {}
 
-.timeline__item {}
+.timeline__item {
+    background-color: #f2e0b28d;
+    display: grid;
+    grid-template-columns: 90px 20px 1fr;
+    gap: 20px
+}
 
-.timeline__date {}
+/* 日時 */
+.timeline__date {
+    margin-top: 0;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+}
 
-.timeline__line {}
+.timeline__date p:nth-child(1) {
+    /* background-color: #4ac36061; */
+    margin-bottom: 0;
 
-.timeline__circle {}
+}
 
-.timeline__content {}
+.timeline__date p:nth-child(2) {
+    /* background-color: #b54ac373; */
+    margin-top: 0;
+    line-height: 0.9rem;
+}
 
-.review-user {}
+/* 緑の丸と線 */
+.timeline__line {
+    /* background-color: #666; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
 
-.review-card {}
+.timeline__circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 1rem;
+    background: #8BC34A;
+    border-radius: 50%;
+    z-index: 2;
+}
 
-.review-star {}
+.timeline__line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.4rem;
+    height: 100%;
+    background: #8BC34A;
+}
+
+/* ユーザー画像＋投稿内容 */
+.timeline__content {
+    /* background-color: #efcb70c2; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 2rem;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-user-image {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgb(0 0 0 / .08);
+}
+
+.review-card p {
+    margin: 0;
+}
+
+.review-star {
+    margin-top: 15px;
+    color: #ffb800;
+}

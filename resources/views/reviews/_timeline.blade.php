@@ -28,16 +28,19 @@
                     <!-- 内容 -->
                     <div class="timeline__content">
                         <div class="review-user">
-                            <img src="user.png" alt="">
+                            {{-- ユーザー画像 --}}
+                            <img src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="review-user-image">
                             {{-- ユーザー名 --}}
                             <span>
                                 {{ $review->user->name }}
                             </span>
                         </div>
                         <div class="review-card">
+                            {{-- 投稿内容 --}}
                             <p>
                                 {{ $review->comment }}
                             </p>
+                            {{-- 評価 --}}
                             <div class="review-star">
                                 {{ $review->evaluation }}
                             </div>
