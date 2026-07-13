@@ -19,12 +19,9 @@ Route::middleware('auth')->group(function () {
 });
 
 //投稿画面 http://localhost:8080/review_system/public/reviews/create
-// Route::get('/reviews/create', function () {
-//     return view('reviews.create');
-// });
 Route::get('/reviews/create', [PostController::class, 'create'])->name('reviews.create');
 
-//
+//フォームのpost受け取り
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
 

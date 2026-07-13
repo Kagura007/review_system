@@ -1,3 +1,4 @@
+/* 投稿フォーム*/
 .p-review-form {
     /* background-color: #ddd; */
     width: 100%;
@@ -16,6 +17,7 @@
     align-items: center;
 }
 
+/* 投稿フォーム：入力欄 */
 .p-review-form__item-group {
     /* background-color: pink; */
     display: flex;
@@ -30,6 +32,21 @@
 
 .p-review-form__textarea {}
 
+.p-review-form__item-group {}
+
+/* 投稿フォーム：評価 */
+.p-review-form__evaluation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.p-review-form__evaluation-label {}
+
+.p-review-form__evaluation-select {}
+
+/* 投稿フォーム：ボタン*/
 .p-review-form__button {
     display: block;
     margin-inline: auto;

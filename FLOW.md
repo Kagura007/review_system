@@ -62,7 +62,7 @@ node v24.16.0
 
 # 投稿機能の実装
 
-## Formでの投稿
+## LaravelでのFormの作成
 
 ### HTML用意：form.blade.php
 @csrf を入れる
@@ -85,9 +85,26 @@ php artisan mitrate:follback
 php artisan make:controller Postcontroller
 結果： C:\xampp\htdocs\review_system\app\Http\Controllers\Postcontroller.php
 
+createメソッドଚデータ格納用ଠstoreメソッドPostControllerを用意
 
+### web.php にルートを追加
+//投稿画面 http://localhost:8080/review_system/public/reviews/create
+Route::get('/reviews/create', [PostController::class, 'create'])->name('reviews.create');
 
-## LaravelでのFormの作成
+//フォームのpost受け取り
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
+### Models 内の Post.php に fillable の指定
+「この4つの項目は、まとめてデータ登録して良い」というLaravelへの許可
+
+### ダッシュボードにフラッシュメッセージを表示
+resources/views/dashboard.blade.php
+http://localhost:8080/review_system/public/login
+
+### 登録されたユーザーでのログイン確認
+BreezeはDB内ではpasswordが暗号化されている！！便利。
+PW:わたしはme
+
 
 ## 投稿ページで実装する機能
 
