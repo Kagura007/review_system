@@ -1,3 +1,18 @@
+.l-header,
+.l-footer {
+    /* background-color: #ddd; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.l-header-inner {}
+
+.l-footer-inner {}
+
 .l-container {
     /* background-color: #ddd; */
     width: 100%;

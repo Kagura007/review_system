@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -7,20 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css'])
     <title>Review System</title>
-</head>
+</head> --}}
 
-<body>
+{{-- <body> --}}
 
-    <main class="l-container p-review-form">
+@include('components.header')
 
-        <h1 class="p-review-form__title">
-            ようこそ、口コミ投稿フォームへ。
-        </h1>
+<main class="l-container p-review-form">
 
-        @include('reviews.form')
+    <h1 class="p-review-form__title">
+        ようこそ、口コミ投稿フォームへ。
+    </h1>
 
-    </main>
+    @include('reviews.form')
 
-</body>
+</main>
 
-</html>
+@include('components.footer')
+
+{{-- </body>
+
+</html> --}}
