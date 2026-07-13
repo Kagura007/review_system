@@ -1,10 +1,14 @@
 <main class="review-list">
 
+    <section class="review-list__title-group">
+        <h1 class="review-list__title">Time Line</h1>
+    </section>
+
     <!-- 上部 -->
     <section class="review-list__header">
-        <h1>いろいろなサービスの口コミを書いてみよう</h1>
+        <p>いろいろなサービスの口コミを書いてみよう</p>
 
-        <a href="#" class="review-list__button">
+        <a href="{{ route('reviews.create') }}" class="review-list__button">
             投稿する
         </a>
     </section>

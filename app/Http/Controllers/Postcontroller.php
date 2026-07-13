@@ -37,7 +37,7 @@ class PostController extends Controller
     public function index()
     {
         $reviews = Post::with('user')
-            ->latest()
+            ->latest()  //= ORDER BY created_at DESC
             ->get();
 
         return view('dashboard', compact('reviews'));

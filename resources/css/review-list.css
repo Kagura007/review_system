@@ -1,12 +1,15 @@
 /* --- タイムラインのスタイル --- */
-.review-list {}
+.review-list {
+    background-color: var(--color-background);
+    margin-top: -24px;
+}
 
 .review-list__header {}
 
 .review-list__button {}
 
 .timeline {
-    background-color: #37ecbf;
+    /* background-color: #37ecbf; */
 }
 
 .timeline__item {}
