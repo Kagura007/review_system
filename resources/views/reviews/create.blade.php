@@ -10,20 +10,24 @@
 </head> --}}
 
 {{-- <body> --}}
+<x-app-layout>
 
-@include('components.header')
+    {{-- @include('components.header') --}}
 
-<main class="l-container p-review-form">
+    <main class="p-review-form">
 
-    <h1 class="p-review-form__title">
-        ようこそ、口コミ投稿フォームへ。
-    </h1>
+        <div class="l-container p-review-form__inner">
+            <h1 class="p-review-form__title">
+                口コミ投稿フォーム
+            </h1>
+            @include('reviews._form')
+        </div>
 
-    @include('reviews._form')
+    </main>
 
-</main>
+</x-app-layout>
 
-@include('components.footer')
+{{-- @include('components.footer') --}}
 
 {{-- </body>
 

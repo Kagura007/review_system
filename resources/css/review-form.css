@@ -1,9 +1,18 @@
 /* --- 投稿フォームのスタイル --- */
 .p-review-form {
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.p-review-form__inner {
     /* background-color: #ddd; */
     width: 100%;
     max-width: 700px;
     margin-inline: auto;
+    padding-bottom: 3rem;
 }
 
 .p-review-form__title {
@@ -51,4 +60,5 @@
     display: block;
     margin-inline: auto;
     margin-top: 2rem;
+    border: none;
 }

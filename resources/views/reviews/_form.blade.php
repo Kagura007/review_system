@@ -25,7 +25,7 @@
             </select>
         </div>
 
-        <button type="submit" class="p-review-form__button">投稿する</button>
+        <button type="submit" class="button p-review-form__button">投稿する</button>
     </form>
 
 </section>

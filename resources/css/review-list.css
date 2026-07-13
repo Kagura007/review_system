@@ -9,9 +9,13 @@
     align-items: center;
     width: 800px;
     margin-inline: auto;
+    margin-bottom: 3rem;
 }
 
-.review-list__title-group {}
+.review-list__title-group {
+    /* background-color: #666; */
+    margin-right: auto;
+}
 
 .review-list__title {}
 
@@ -26,21 +30,9 @@
 }
 
 /* 投稿フォームへのリンク */
-.review-list__button {
-    background-color: var(--color-primary-dark);
-    padding-inline: 0.5rem;
-    padding-block: 0.1rem;
-    border-radius: 2px;
-    box-shadow: 0 3px 0px #407ea2;
-    color: var(--color-white);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    ;
-}
+/* .review-list__button {} */
 
-.review-list__button:active {
-    box-shadow: 0 0 0 #407ea2;
-    transform: translateY(4px);
-}
+/*.review-list__button:active {} */
 
 .timeline {}
 

@@ -7,7 +7,7 @@
         <!-- 上部 -->
         <section class="review-list__header">
             <p>いろいろなサービスの口コミを書いてみよう</p>
-            <a href="{{ route('reviews.create') }}" class="review-list__button">
+            <a href="{{ route('reviews.create') }}" class="button review-list__button">
                 投稿する
             </a>
         </section>

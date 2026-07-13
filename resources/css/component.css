@@ -1,0 +1,18 @@
+/* --- 共通パーツのスタイル --- */
+
+/* 沈むボタン */
+.button {
+    background-color: var(--color-primary-dark);
+    padding-inline: 0.5rem;
+    padding-block: 0.1rem;
+    border-radius: 2px;
+    box-shadow: 0 3px 0px #407ea2;
+    color: var(--color-white);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    ;
+}
+
+.button:active {
+    box-shadow: 0 0 0 #407ea2;
+    transform: translateY(4px);
+}
