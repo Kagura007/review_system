@@ -1,7 +1,7 @@
 <section class="p-review-form__form-content">
 
     {{-- 入力フォーム --}}
-    <form action="{{ route('posts.store') }}" method="POST" class="p-review-form__form">
+    <form action="{{ route('post.store') }}" method="POST" class="p-review-form__form">
         @csrf
         <div class="p-review-form__item-group">
             <label for="comment" class="p-review-form__label">投稿内容：

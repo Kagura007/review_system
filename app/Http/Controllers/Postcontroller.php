@@ -11,20 +11,21 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+    // 投稿画面表示
     public function create(): View
     {
         return view('reviews.create');
     }
 
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
 
         //投稿作成
         Post::create([
-            'user_id' => Auth::id(),
-            'parent_id' => $request['parent_id'] ?? null,
-            'comment' => $request['comment'],
+            'user_id'    => Auth::id(),
+            'parent_id'  => $request['parent_id'] ?? null,
+            'comment'    => $request['comment'],
             'evaluation' => $request['evaluation']
         ]);
 
