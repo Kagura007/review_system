@@ -22,3 +22,21 @@ scss/
 
 
 # 2026/07/13  current 11:27,  day :00,  total 5:00
+
+## POST通信で来たリクエストを受け取る
+
+### <form action="{{ route('posts.store') }}">
+posts.store という名前のルートを探す
+
+### Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
+->name('posts.store')
+    ルートに名前を付けている
+    結果： <form action="/posts" method="POST">
+
+'/posts': 送信先のURL 
+    フォーム側：<form action="/posts" method="POST">
+    
+[PostController::class, 'store']
+    PostControllerのstoreメソッドを実行
+

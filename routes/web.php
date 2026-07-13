@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,9 +18,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//フォーム画面 http://localhost:8080/review_system/public/reviews/form
-Route::get('/reviews/create', function () {
-    return view('reviews.create');
-});
+//投稿画面 http://localhost:8080/review_system/public/reviews/create
+// Route::get('/reviews/create', function () {
+//     return view('reviews.create');
+// });
+Route::get('/reviews/create', [PostController::class, 'create'])->name('reviews.create');
+
+//
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
+
 
 require __DIR__ . '/auth.php';

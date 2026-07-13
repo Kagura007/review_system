@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Post;
 
-class Postcontroller extends Controller
+class PostController extends Controller
 {
     public function create(): View
     {
-        return view('post.create');
+        return view('reviews.create');
     }
 
 
