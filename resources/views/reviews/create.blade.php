@@ -19,7 +19,7 @@
         ようこそ、口コミ投稿フォームへ。
     </h1>
 
-    @include('reviews.form')
+    @include('reviews._form')
 
 </main>
 
