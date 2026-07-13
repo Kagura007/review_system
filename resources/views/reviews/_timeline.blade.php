@@ -13,44 +13,46 @@
     <!-- タイムライン -->
     <section class="timeline">
 
-        {{-- @foreach ($reviews as $review) --}}
-        <!-- 口コミ1件 -->
-        <article class="timeline__item">
+        @foreach ($reviews as $review)
+            <!-- 口コミ1件 -->
+            <article class="timeline__item">
 
-            <!-- 日付 -->
-            <div class="timeline__date">
-                <p>2025/06/26</p>
-                <p>9:20</p>
-            </div>
-
-            <!-- 線と丸 -->
-            <div class="timeline__line">
-                <span class="timeline__circle"></span>
-            </div>
-
-            <!-- 内容 -->
-            <div class="timeline__content">
-
-                <div class="review-user">
-                    <img src="user.png" alt="">
-                    <span>ユーザー名</span>
+                <!-- 日付 -->
+                <div class="timeline__date">
+                    <p>{{ $review->created_at->format('Y/m/d') }}</p>
+                    <p>{{ $review->created_at->format('H:i') }}</p>
                 </div>
 
-                <div class="review-card">
-                    <p>
-                        ○○ビル2階のレストラン。
-                        フレンチなのに入りやすく...
-                    </p>
+                <!-- 線と丸 -->
+                <div class="timeline__line">
+                    <span class="timeline__circle"></span>
+                </div>
 
-                    <div class="review-star">
-                        ★★★★★
+                <!-- 内容 -->
+                <div class="timeline__content">
+
+                    <div class="review-user">
+                        <img src="user.png" alt="">
+                        {{-- ユーザー名 --}}
+                        <span>
+                            {{ $review->user->name }}
+                        </span>
                     </div>
+
+                    <div class="review-card">
+                        <p>
+                            {{ $review->comment }}
+                        </p>
+
+                        <div class="review-star">
+                            {{ $review->evaluation }}
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
-
-        </article>
-        {{-- @endforeach --}}
+            </article>
+        @endforeach
 
     </section>
 

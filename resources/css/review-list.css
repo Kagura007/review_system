@@ -1,0 +1,26 @@
+/* --- タイムラインのスタイル --- */
+.review-list {}
+
+.review-list__header {}
+
+.review-list__button {}
+
+.timeline {
+    background-color: #37ecbf;
+}
+
+.timeline__item {}
+
+.timeline__date {}
+
+.timeline__line {}
+
+.timeline__circle {}
+
+.timeline__content {}
+
+.review-user {}
+
+.review-card {}
+
+.review-star {}

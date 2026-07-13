@@ -32,4 +32,14 @@ class PostController extends Controller
         //リダイレクトやレスポンスを返す
         return redirect()->route('dashboard')->with('success', '投稿が完了しました！');
     }
+
+    //ダッシュボードの表示
+    public function index()
+    {
+        $reviews = Post::with('user')
+            ->latest()
+            ->get();
+
+        return view('dashboard', compact('reviews'));
+    }
 }

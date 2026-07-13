@@ -13,4 +13,10 @@ class Post extends Model
         'comment',
         'evaluation'
     ];
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
