@@ -115,10 +115,16 @@ PW:わたしはme
 
 # タイムラインの実装
 
-## Laravelでの表示機能（blade）について
+## HTML用意
+既存ダッシュボード書き換え
 
-## style.cssの追加
+## Route > controller > model 設定
+web.php
+PostController.php
+Post.php
+User.php
 
-## 口コミ投稿データの取得
+## 口コミ投稿データの取得と表示
+bladeを活用した受け取り、記述が少なく楽。
 
-## 口コミ投稿データの表示
+
