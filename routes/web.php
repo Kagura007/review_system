@@ -18,8 +18,8 @@ Route::middleware('auth')->group(function () {
 });
 
 //フォーム画面 http://localhost:8080/review_system/public/reviews/form
-Route::get('/reviews/form', function () {
-    return view('reviews.form');
+Route::get('/reviews/create', function () {
+    return view('reviews.create');
 });
 
 require __DIR__ . '/auth.php';

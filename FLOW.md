@@ -69,7 +69,7 @@ node v24.16.0
 
 ### Post.php 生成
 php artisan make:model Post -m
-C:\xampp\htdocs\review_system\app\Models\Post.php
+結果： C:\xampp\htdocs\review_system\app\Models\Post.php
 
 ### テーブルの構造を指定
 C:\xampp\htdocs\review_system\database\migrations\2026_07_12_152605_create_posts_table.php 
@@ -80,6 +80,11 @@ php artisan migrate
 
 ### ※操作を１つ戻す（回数指定をして取り消すこともできる）
 php artisan mitrate:follback
+
+### Postコントローラ作成
+php artisan make:controller Postcontroller
+結果： C:\xampp\htdocs\review_system\app\Http\Controllers\Postcontroller.php
+
 
 
 ## LaravelでのFormの作成

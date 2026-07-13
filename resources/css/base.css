@@ -1,16 +1,21 @@
 :root {
     --color-primary: #5a8e56;
+    /*未調整*/
     --color-primary-dark: #3c6339;
+    /*未調整*/
     --color-secondary: #e47777;
-    --color-background: #fbf7f0;
+    /*未調整*/
+    --color-background: #cde6f4;
     --color-text-base: #333333;
     --color-text: #747474;
     --color-text-secondary: #6b5e49;
+    /*未調整*/
     --color-card: #f8f1e5;
+    /*未調整*/
     --color-white: #ffffff;
     /* Googleフォントの読み込み必要 */
-    --font-base: "Zen Kaku Gothic New", "Zen Maru Gothic", sans-serif;
-    --font-title: "Zen Maru Gothic", "Zen Kaku Gothic New", sans-serif;
+    --font-base: "Zen Kaku Gothic New", "Noto Sans JP", "Zen Maru Gothic", sans-serif;
+    --font-title: "Zen Kaku Gothic", "Noto Sans JP", "Zen Maru Gothic New", sans-serif;
 }
 
 html {
