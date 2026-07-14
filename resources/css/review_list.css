@@ -1,9 +1,9 @@
 /* --- タイムラインのスタイル --- */
-.review-list {
+.p-review-list {
     background-color: var(--color-background);
 }
 
-.review-list__inner {
+.p-review-list__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,14 +12,14 @@
     margin-bottom: 3rem;
 }
 
-.review-list__title-group {
+.p-review-list__title-group {
     /* background-color: #666; */
     margin-right: auto;
 }
 
-.review-list__title {}
+.p-review-list__title {}
 
-.review-list__header {
+.p-review-list__header {
     /* background-color: red; */
     display: flex;
     flex-direction: row;
@@ -34,9 +34,9 @@
 
 /*.review-list__button:active {} */
 
-.timeline {}
+.p-timeline {}
 
-.timeline__item {
+.p-timeline__item {
     /* background-color: #f2e0b28d; */
     display: grid;
     grid-template-columns: 90px 20px 1fr;
@@ -44,34 +44,34 @@
 }
 
 /* 日時 */
-.timeline__date {
+.p-timeline__date {
     margin-top: 0;
     text-align: right;
     font-size: 0.9rem;
     color: #666;
 }
 
-.timeline__date p:nth-child(1) {
+.p-timeline__date p:nth-child(1) {
     /* background-color: #4ac36061; */
     margin-bottom: 0;
 
 }
 
-.timeline__date p:nth-child(2) {
+.p-timeline__date p:nth-child(2) {
     /* background-color: #b54ac373; */
     margin-top: 0;
     line-height: 0.9rem;
 }
 
 /* 緑の丸と線 */
-.timeline__line {
+.p-timeline__line {
     /* background-color: #666; */
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.timeline__circle {
+.p-timeline__circle {
     width: 1.2rem;
     height: 1.2rem;
     margin-top: 1rem;
@@ -80,7 +80,7 @@
     z-index: 2;
 }
 
-.timeline__line::after {
+.p-timeline__line::after {
     content: "";
     position: absolute;
     top: 0;
@@ -90,7 +90,7 @@
 }
 
 /* ユーザー画像＋投稿内容 */
-.timeline__content {
+.p-timeline__content {
     /* background-color: #efcb70c2; */
     display: flex;
     flex-direction: column;
@@ -98,30 +98,30 @@
     margin-top: 2rem;
 }
 
-.review-user {
+.p-review-user {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.review-user-image {
+.p-review-user-image {
     width: 30px;
     height: auto;
     border-radius: 50%;
 }
 
-.review-card {
+.p-review-card {
     background: #fff;
     border-radius: 15px;
     padding: 1.5rem;
     box-shadow: 0 4px 10px rgb(0 0 0 / .08);
 }
 
-.review-card p {
+.p-review-card p {
     margin: 0;
 }
 
-.review-star {
+.p-review-star {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -130,7 +130,12 @@
     margin-top: 15px;
 }
 
-.review-star-image {
+.p-review-star-image {
     width: 1.3rem;
     height: auto;
+}
+
+.p-review-list__button-comment {
+    /* background-color: red; */
+    margin-left: auto;
 }

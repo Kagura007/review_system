@@ -24,6 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/reviews/create', [PostController::class, 'create'])->name('reviews.create');
     //フォームのpost受け取り
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
+    //post.idを受け取りコメントモードに
+    Route::get('post/create/{id}', [PostController::class, 'create'])->name('post.create');
 });
 
 

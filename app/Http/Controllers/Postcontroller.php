@@ -12,9 +12,19 @@ use App\Models\Post;
 class PostController extends Controller
 {
     // 投稿画面表示
-    public function create(): View
+    public function create($id): View
     {
-        return view('reviews.create');
+        if ($id > -1) {  // $id：URLから受け取った値、「-1」は新規レビュー、整数ならコメントid
+            $post = Post::with('user')->find($id);  // $post：レビューのデータ
+
+            if (!$post) {
+                abort(404);
+            }
+        } else {
+            $post = null;
+        }
+
+        return view('reviews.create', compact('post'));
     }
 
 
@@ -47,7 +57,8 @@ class PostController extends Controller
     //ダッシュボードの表示
     public function index()
     {
-        $reviews = Post::with('user')
+        $reviews = Post::with(['user', 'reply'])
+            ->whereNull('parent_id')
             ->latest()  //= ORDER BY created_at DESC
             ->get();
 
