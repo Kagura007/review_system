@@ -13,6 +13,10 @@
         </section>
         <!-- タイムライン -->
         <section class="timeline">
+            @if ($reviews->isEmpty())
+                <p>まだ投稿がありません</p>
+            @endif
+
             @foreach ($reviews as $review)
                 <!-- 口コミ1件 -->
                 <article class="timeline__item">
