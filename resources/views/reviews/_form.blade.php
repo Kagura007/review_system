@@ -3,11 +3,19 @@
     {{-- 入力フォーム --}}
     <form action="{{ route('post.store') }}" method="POST" class="p-review-form__form">
         @csrf
+
+        {{-- エラー表示 --}}
+        @error('comment')
+            <p class="c-error">{{ $message }}</p>
+        @enderror
+
+        {{-- 投稿内容 --}}
         <div class="p-review-form__item-group">
             <label for="comment" class="p-review-form__label">{{ __('投稿内容') }}：
             </label>
             <textarea name="comment" id="content" cols="50" rows="10" required class="p-review-form__textarea">
-                    </textarea>
+                {{ old('comment') }}
+            </textarea>
         </div>
 
         {{-- 評価 --}}
@@ -25,7 +33,7 @@
             </select>
         </div>
 
-        <button type="submit" class="button p-review-form__button">{{ __('投稿する') }}</button>
+        <button type="submit" class="c-button p-review-form__button">{{ __('投稿する') }}</button>
     </form>
 
 </section>

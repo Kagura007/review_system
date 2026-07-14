@@ -20,6 +20,17 @@ class PostController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
+        // バリデーション
+        $request->validate(
+            [
+                'comment'    => ['required', 'string', 'max:1000'],
+                'evaluation' => ['required', 'integer']
+            ],
+            [
+                'comment.required'    => '投稿内容を入力してください',
+                'evaluation.required' => '評価をせんたくしてください'
+            ]
+        );
 
         //投稿作成
         Post::create([

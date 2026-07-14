@@ -7,7 +7,7 @@
         <!-- 上部 -->
         <section class="review-list__header">
             <p>{{ __('いろいろなサービスの口コミを書いてみよう') }}</p>
-            <a href="{{ route('reviews.create') }}" class="button review-list__button">
+            <a href="{{ route('reviews.create') }}" class="c-button review-list__button">
                 {{ __('投稿する') }}
             </a>
         </section>
@@ -26,7 +26,7 @@
                     <div class="timeline__line">
                         <span class="timeline__circle"></span>
                     </div>
-                    <!-- 内容 -->
+                    <!-- 投稿内容 -->
                     <div class="timeline__content">
                         <div class="review-user">
                             {{-- ユーザー画像 --}}

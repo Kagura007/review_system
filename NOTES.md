@@ -1,3 +1,15 @@
+# Access -- アクセス --
+
+## Root
+http://localhost:8080/review_system/
+
+## ダッシュボード
+http://localhost:8080/review_system/public/dashboard
+
+## 口コミ投稿フォーム
+http://localhost:8080/review_system/public/reviews/create
+
+
 # Structure -- 構造 --
 
 ## View

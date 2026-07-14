@@ -1,7 +1,14 @@
 /* --- 共通パーツのスタイル --- */
 
+/* エラーメッセージ */
+.c-error {
+    color: #a32525;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
 /* 沈むボタン */
-.button {
+.c-button {
     background-color: var(--color-primary-dark);
     padding-inline: 0.5rem;
     padding-block: 0.1rem;
@@ -12,7 +19,7 @@
     ;
 }
 
-.button:active {
+.c-button:active {
     box-shadow: 0 0 0 #407ea2;
     transform: translateY(4px);
 }
