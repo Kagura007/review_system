@@ -1,9 +1,6 @@
 <div class="p-review-list">
 
     <div class="p-review-list__inner">
-        <section class="p-review-list__title-group">
-            <p class="p-review-list__title">このレビューに投稿する</p>
-        </section>
 
         <!-- コメントしたいレビュー -->
         <section class="p-timeline">
@@ -45,8 +42,41 @@
                     </div>
                 </div>
             </article>
-
         </section>
+
+        {{-- コメント投稿フォーム --}}
+        <form action="{{ route('post.store') }}" method="post" class="p-comment-form">
+            @csrf
+
+            <div class="p-comment-form__textarea-group">
+                <textarea name="comment" id="" cols="30" rows="5" class="p-comment-form__textarea">{{ old('comment') }}</textarea>
+
+                @error('comment')
+                    <div class="c-error">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div>
+                @if (is_null($review))
+                    ⭐<select name="evaluation" id="">
+                        <option value="1">1つ</option>
+                        <option value="2">2つ</option>
+                        <option value="3">3つ</option>
+                        <option value="4">4つ</option>
+                        <option value="5">5つ</option>
+                    </select>
+                @else
+                    {{-- 改善案：コメント → evaluation は NULL --}}
+                    <input type="hidden" name="evaluation" value="1">
+                @endif
+            </div>
+
+            <button type="submit" class="c-button p-comment-form__button">{{ __('投稿する') }}</button>
+
+            @if (!is_null($review))
+                <input type="hidden" name="parent_id" value="{{ $review->id }}">
+            @endif
+        </form>
 
     </div>
 </div>

@@ -5,7 +5,7 @@
         @if ($review)
             <div class="l-container p-review-form__inner">
                 <h1 class="p-review-form__title">
-                    {{ __('コメント投稿フォーム') }}
+                    {{ __('コメント投稿') }}
                 </h1>
 
                 @include('reviews._comment_form')
@@ -13,7 +13,7 @@
         @else
             <div class="l-container p-review-form__inner">
                 <h1 class="p-review-form__title">
-                    {{ __('口コミ投稿フォーム') }}
+                    {{ __('レビュー投稿') }}
                 </h1>
 
                 @include('reviews._form')

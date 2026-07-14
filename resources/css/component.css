@@ -12,6 +12,7 @@
     background-color: var(--color-primary-dark);
     padding-inline: 0.5rem;
     padding-block: 0.1rem;
+    border: none;
     border-radius: 2px;
     box-shadow: 0 3px 0px #407ea2;
     color: var(--color-white);

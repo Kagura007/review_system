@@ -5,6 +5,8 @@
 @import "./component.css";
 @import "./review_form.css";
 @import "./review_list.css";
+@import "./comment_form.css";
+@import "./comment.css";
 @import "./utility.css";
 
 /* @tailwind base; */

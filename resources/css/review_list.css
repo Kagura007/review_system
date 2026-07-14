@@ -30,9 +30,9 @@
 }
 
 /* 投稿フォームへのリンク */
-/* .review-list__button {} */
+.review-list__button {}
 
-/*.review-list__button:active {} */
+.review-list__button:active {}
 
 .p-timeline {}
 
@@ -54,7 +54,6 @@
 .p-timeline__date p:nth-child(1) {
     /* background-color: #4ac36061; */
     margin-bottom: 0;
-
 }
 
 .p-timeline__date p:nth-child(2) {

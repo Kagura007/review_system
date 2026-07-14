@@ -13,7 +13,7 @@
         <div class="p-review-form__item-group">
             <label for="comment" class="p-review-form__label">{{ __('投稿内容') }}：
             </label>
-            <textarea name="comment" id="content" cols="50" rows="10" required class="p-review-form__textarea">
+            <textarea name="comment" id="content" cols="100" rows="10" required class="p-review-form__textarea">
                 {{ old('comment') }}
             </textarea>
         </div>
