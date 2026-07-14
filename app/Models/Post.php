@@ -22,10 +22,11 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-
+    // コメント降順３件まで
     public function reply(): HasMany
     {
         return $this->hasMany(Post::class, 'parent_id')
-            ->latest();
+            ->latest()
+            ->limit(3);
     }
 }

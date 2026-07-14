@@ -47,7 +47,7 @@ posts.store という名前のルートを探す
 # 次回：口コミ投稿サービスの開発（タイムラインの実装）① の確認から
 
 
-# 2026/07/14  current 22:47,  day :,  total 10:20,  total-day 3
+# 2026/07/14  current ,  day 4:30,  total 14:50,  total-day 3
 
 ## 多言語対応 
 記述：{{ __('投稿します') }}
@@ -68,4 +68,4 @@ Laravel に設定されている言語を取得してくれる
 ※ユーザーの環境を取ってきてくれるわけではない
 
 
-# 2026/07/15  current ,  day :,  total :,  total-day 4
+# 2026/07/15  current ,  day :,  total 14:50,  total-day 4

@@ -57,7 +57,9 @@
 
                         {{-- レビューへのコメント一覧表示 --}}
                         @if ($review->reply->isNotEmpty())
-                            @include('reviews._review_comments')
+                            @foreach ($review->reply as $reply)
+                                @include('reviews._review_comments', ['reply' => $reply])
+                            @endforeach
                         @endif
 
                         <a href="{{ route('reviews.create', $review->id) }}"
