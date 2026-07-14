@@ -6,18 +6,15 @@
         </section>
         <!-- 上部 -->
         <section class="review-list__header">
-            <p>いろいろなサービスの口コミを書いてみよう</p>
+            <p>{{ __('いろいろなサービスの口コミを書いてみよう') }}</p>
             <a href="{{ route('reviews.create') }}" class="button review-list__button">
-                投稿する
+                {{ __('投稿する') }}
             </a>
         </section>
+
         <!-- タイムライン -->
         <section class="timeline">
-            @if ($reviews->isEmpty())
-                <p>まだ投稿がありません</p>
-            @endif
-
-            @foreach ($reviews as $review)
+            @forelse ($reviews as $review)
                 <!-- 口コミ1件 -->
                 <article class="timeline__item">
                     <!-- 日付 -->
@@ -56,8 +53,12 @@
                         </div>
                     </div>
                 </article>
-            @endforeach
+            @empty
+                <p class="timeline__empty">{{ __('まだ投稿がありません') }}</p>
+            @endforelse
+
         </section>
+
     </div>
 
 </main>

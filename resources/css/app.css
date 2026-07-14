@@ -3,8 +3,8 @@
 @import "./foundation.css";
 @import "./layout.css";
 @import "./component.css";
-@import "./review-form.css";
-@import "./review-list.css";
+@import "./review_form.css";
+@import "./review_timeline.css";
 @import "./utility.css";
 
 /* @tailwind base; */

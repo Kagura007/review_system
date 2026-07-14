@@ -4,7 +4,7 @@
     <form action="{{ route('post.store') }}" method="POST" class="p-review-form__form">
         @csrf
         <div class="p-review-form__item-group">
-            <label for="comment" class="p-review-form__label">投稿内容：
+            <label for="comment" class="p-review-form__label">{{ __('投稿内容') }}：
             </label>
             <textarea name="comment" id="content" cols="50" rows="10" required class="p-review-form__textarea">
                     </textarea>
@@ -13,7 +13,7 @@
         {{-- 評価 --}}
         <div class="p-review-form__evaluation">
             <label for="evaluation" class="p-review-form__evaluation-label">
-                評価：
+                {{ __('評価') }}：
             </label>
 
             <select name="evaluation" class="p-review-form__evaluation-select">
@@ -25,7 +25,7 @@
             </select>
         </div>
 
-        <button type="submit" class="button p-review-form__button">投稿する</button>
+        <button type="submit" class="button p-review-form__button">{{ __('投稿する') }}</button>
     </form>
 
 </section>
