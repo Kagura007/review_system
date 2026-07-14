@@ -21,11 +21,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //投稿画面 http://localhost:8080/review_system/public/reviews/create
-    Route::get('/reviews/create', [PostController::class, 'create'])->name('reviews.create');
+    //フォームのpost.idを受け取りコメントモードに分岐
+    Route::get('/reviews/create/{id}', [PostController::class, 'create'])->name('reviews.create');
     //フォームのpost受け取り
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
-    //post.idを受け取りコメントモードに
-    Route::get('post/create/{id}', [PostController::class, 'create'])->name('post.create');
 });
 
 
