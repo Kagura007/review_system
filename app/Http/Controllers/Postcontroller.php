@@ -15,16 +15,16 @@ class PostController extends Controller
     public function create($id): View
     {
         if ($id > -1) {  // $id：URLから受け取った値、「-1」は新規レビュー、整数ならコメントid
-            $post = Post::with('user')->find($id);  // $post：レビューのデータ
+            $review = Post::with('user')->find($id);  // $post：レビューのデータ
 
-            if (!$post) {
+            if (!$review) {
                 abort(404);
             }
         } else {
-            $post = null;
+            $review = null;
         }
 
-        return view('reviews.create', compact('post'));
+        return view('reviews.create', compact('review'));
     }
 
 
