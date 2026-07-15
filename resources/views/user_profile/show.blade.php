@@ -1,1 +1,14 @@
-<div>show.blade.phpだよ⭐️</div>
+<x-app-layout>
+
+    {{-- セッションに設定したメッセージが入る --}}
+    {{-- @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif --}}
+
+    @include('user_profile._user_profile')
+
+    @include('user_profile._user_review_list')
+
+</x-app-layout>
