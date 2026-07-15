@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class UserProfileController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
@@ -33,9 +35,9 @@ class UserProfileController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id): View
     {
-        //
+        return view('user_profile.show');
     }
 
     /**

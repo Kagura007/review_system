@@ -30,6 +30,9 @@ C:\xampp\htdocs\review_system\resources\views\reviews\_form.blade.php
 #### コメント投稿フォーム（※投稿フォームとデザインが違ったため、別ファイルにしています）
 C:\xampp\htdocs\review_system\resources\views\reviews\_comment_form.blade.php
 
+### プロフィールページ
+C:\xampp\htdocs\review_system\resources\views\user_profile\show.blade.php
+
 
 ## CSS
 \review_system\resources\css

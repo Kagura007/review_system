@@ -153,5 +153,11 @@ php artisan migrate
 ## コントローラーの作成
 php artisan make:controller UserProfileController --resource
 
-「--resource」：オプション
+「--resource」： ControllerをCRUD（作成・表示・更新・削除）用のひな形付きで作るオプション
 
+## ルーティング：web.php
+
+## プロフィールページHTML作成：show.blade.php
+C:\xampp\htdocs\review_system\resources\views\user_profile\show.blade.php
+
+## コントローラーに指示を書き込む：UserProfileController.php

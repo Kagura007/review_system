@@ -113,4 +113,4 @@ cascade： 小さな滝、連なって流れ落ちるもの
 
 # 次回：口コミ投稿サービスの開発（フォロー機能の実装）◯ の視聴から
 
-# 2026/07/16  current ,  day :,  total :,  total-day 5
+# 2026/07/16  current 17:10,  day :,  total :,  total-day 5

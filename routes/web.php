@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/reviews/create/{id}', [PostController::class, 'create'])->name('reviews.create');
     //フォームのpost受け取り
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
+
+    // ユーザ プロフィールページ
+    Route::get('/user_profile/show/{id}', [UserProfileController::class, 'show'])->name('user_profile.show');
 });
 
 
