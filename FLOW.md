@@ -110,9 +110,6 @@ PW:わたしはme
 ## 確認ページの作成
 
 
-# 次、口コミ投稿サービスの開発（タイムラインの実装）① から視聴
-
-
 # タイムラインの実装
 
 ## HTML用意
@@ -135,4 +132,26 @@ bladeを活用した受け取り、記述が少なく楽。
 リレーション parent_id を使って保存、表示
 
 
-# 次、口コミ投稿サービスの開発（タイムラインの実装）③ から視聴
+# プロフィールページの作成
+
+## モデル作成
+php artisan make:model UserProfile -m
+「-m」：migrationも一緒に作ってねというオプション
+
+app/
+ └ Models/
+    └ UserProfile.php
+
+### 「-m」の結果
+database/
+ └ migrations/
+    └ 2026_xx_xx_create_user_profiles_table.php
+
+## テーブル作成
+php artisan migrate 
+
+## コントローラーの作成
+php artisan make:controller UserProfileController --resource
+
+「--resource」：オプション
+

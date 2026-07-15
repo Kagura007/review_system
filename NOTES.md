@@ -10,10 +10,26 @@ http://localhost:8080/review_system/public/dashboard
 http://localhost:8080/review_system/public/reviews/create
 
 
+
 # Structure -- 構造 --
 
 ## View
 \review_system\resources\views\reviews
+
+### ダッシュボード
+C:\xampp\htdocs\review_system\resources\views\dashboard.blade.php
+#### タイムライン表示
+C:\xampp\htdocs\review_system\resources\views\reviews\_timeline.blade.php
+#### コメント表示
+C:\xampp\htdocs\review_system\resources\views\reviews\_review_comments.blade.php
+
+### フォーム
+C:\xampp\htdocs\review_system\resources\views\reviews\create.blade.php
+#### レビュー投稿フォーム
+C:\xampp\htdocs\review_system\resources\views\reviews\_form.blade.php
+#### コメント投稿フォーム（※投稿フォームとデザインが違ったため、別ファイルにしています）
+C:\xampp\htdocs\review_system\resources\views\reviews\_comment_form.blade.php
+
 
 ## CSS
 \review_system\resources\css
@@ -23,8 +39,7 @@ http://localhost:8080/review_system/public/reviews/create
 
 
 # How To View  -- 表示方法 --
-
-## vite 使用のためnpm run dev 必須
+● vite 使用のためnpm run dev 必須
 
 
 # Highlights -- 工夫した点 --

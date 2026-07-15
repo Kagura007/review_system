@@ -8,6 +8,8 @@
                     {{ __('コメント投稿') }}
                 </h1>
 
+                <p>{{ __('このレビューに対するコメントを投稿できます。') }}</p>
+
                 @include('reviews._comment_form')
             </div>
         @else
@@ -15,6 +17,8 @@
                 <h1 class="p-review-form__title">
                     {{ __('レビュー投稿') }}
                 </h1>
+
+                <p>{{ __('サービスへのレビューを投稿できます。') }}</p>
 
                 @include('reviews._form')
             </div>
