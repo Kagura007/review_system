@@ -1,0 +1,127 @@
+.p-profile {
+    padding-block: 3rem;
+    padding-inline: 2rem;
+}
+
+/* プロフィール情報 */
+.p-user-profile {}
+
+.p-user-profile__image-group {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.p-user-profile__image {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.p-user-profile__name-group {
+    /* background-color: pink; */
+}
+
+.p-user-profile__user-name {
+    /* background-color: beige; */
+    line-height: 1;
+    font-weight: 600;
+}
+
+.p-user-profile__user-id {
+    /* background-color: rgb(100, 100, 211); */
+    padding-top: 0.3rem;
+    line-height: 1;
+    color: var(--color-tex-light);
+    font-size: 0.9rem;
+}
+
+.p-user-profile__description-group {
+    /* background-color: goldenrod; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.p-user-profile__description {}
+
+.p-user-profile__btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 3rem;
+}
+
+.p-user-profile__follow-btn {}
+
+.p-user-profile__follow-cancel-btn {
+    background-color: #9b9b9b;
+    box-shadow: 0 3px 0px #7e7e7e;
+    color: var(--color-white);
+}
+
+
+/* 切り替えタグ */
+.p-user-profile__tab-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    width: 20rem;
+}
+
+/* タグ共通 */
+.p-user-profile__tab {
+    background-color: transparent;
+    flex: 1;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
+
+.p-user-profile__tab--active {
+    /* background-color: #f1f1f1; */
+    font-weight: 400;
+}
+
+/* 下線 */
+.p-user-profile__indicator {
+    background: #737373;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* タブが2個なので半分 */
+    width: 50%;
+    height: 3px;
+    transition: transform .3s ease;
+}
+
+
+/* 切り替え内容共通 */
+.p-user-profile__tab-content {
+    background-color: #e3eef4;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+/* 投稿済みレビュー一覧 */
+.p-user-profile__review-list {
+    margin-top: 2rem;
+}
+
+/* お気に入り一覧 */
+.p-user-profile__favorite-list {}

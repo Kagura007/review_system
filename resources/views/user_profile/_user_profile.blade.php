@@ -1,8 +1,10 @@
 <section class="p-user-profile">
 
     <div class="p-user-profile__image-group">
+
         {{-- ユーザー画像 --}}
         <image src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="p-user-profile__image"></image>
+
         {{-- ユーザー名＋ID --}}
         <div class="p-user-profile__name-group">
             {{-- ユーザーニックネーム --}}
@@ -19,11 +21,12 @@
                 ユーザーID： {{ $profile->file_name }}
             </div>
         </div>
+
     </div>
 
     {{-- 自己紹介＋フォローボタン --}}
     <div class="p-user-profile__description-group">
-        <div>
+        <div class="p-user-profile__description">
             @if (blank($profile->description))
                 また自己紹介がありません
             @else
@@ -31,8 +34,11 @@
             @endif
         </div>
 
-        <button class="c-button p-user-profile__follow-btn">{{ __('フォローする') }}</button>
-        <button class="c-button p-user-profile__follow-cancel-btn">{{ __('フォロー解除する') }}</button>
+        <div class="p-user-profile__btn-group">
+            <button class="c-button
+                p-user-profile__follow-btn">{{ __('フォローする') }}</button>
+            <button class="c-button p-user-profile__follow-cancel-btn">{{ __('フォロー解除する') }}</button>
+        </div>
     </div>
 
 </section>

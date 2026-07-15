@@ -3,10 +3,11 @@
 @import "./foundation.css";
 @import "./layout.css";
 @import "./component.css";
-@import "./review_form.css";
-@import "./review_list.css";
-@import "./comment_form.css";
-@import "./comment.css";
+@import "./project/review_form.css";
+@import "./project/review_list.css";
+@import "./project/comment_form.css";
+@import "./project/comment.css";
+@import "./project/user_profile.css";
 @import "./utility.css";
 
 /* @tailwind base; */
