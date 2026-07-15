@@ -7,7 +7,13 @@ http://localhost:8080/review_system/
 http://localhost:8080/review_system/public/dashboard
 
 ## 口コミ投稿フォーム
-http://localhost:8080/review_system/public/reviews/create
+http://localhost:8080/review_system/public/reviews/create/-1
+
+## コメント投稿フォーム
+http://localhost:8080/review_system/public/reviews/create/{id}
+
+## プロフィールページ（仮）
+http://localhost:8080/review_system/public/user_profile/show/1
 
 
 
@@ -65,3 +71,5 @@ DESC ではなく latest() を使用
     @empty
         <p class="timeline__empty">まだ投稿がありません</p>
     @endforelse
+
+## プロフィールページのタブ切り替えにJavaScript使用

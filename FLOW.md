@@ -125,9 +125,6 @@ User.php
 bladeを活用した受け取り、記述が少なく楽。
 
 
-# 現在、口コミ投稿サービスの開発（タイムラインの実装）① 視聴中
-
-
 # コメント投稿機能の実装
 リレーション parent_id を使って保存、表示
 
@@ -159,5 +156,9 @@ php artisan make:controller UserProfileController --resource
 
 ## プロフィールページHTML作成：show.blade.php
 C:\xampp\htdocs\review_system\resources\views\user_profile\show.blade.php
+
+bladeでパーツ分け
+
+DBデータ呼び出し
 
 ## コントローラーに指示を書き込む：UserProfileController.php

@@ -5,7 +5,7 @@
         @if ($review)
             <div class="l-container p-review-form__inner">
                 <h1 class="p-review-form__title">
-                    {{ __('コメント投稿') }}
+                    {{ __('Post a comment') }}
                 </h1>
 
                 <p>{{ __('このレビューに対するコメントを投稿できます。') }}</p>
@@ -15,7 +15,7 @@
         @else
             <div class="l-container p-review-form__inner">
                 <h1 class="p-review-form__title">
-                    {{ __('レビュー投稿') }}
+                    {{ __('Post a review') }}
                 </h1>
 
                 <p>{{ __('サービスへのレビューを投稿できます。') }}</p>

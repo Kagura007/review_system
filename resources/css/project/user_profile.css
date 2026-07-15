@@ -50,6 +50,7 @@
 
 .p-user-profile__description {}
 
+/* フォローボタン グループ */
 .p-user-profile__btn-group {
     display: flex;
     flex-direction: row;
@@ -61,9 +62,10 @@
 
 .p-user-profile__follow-btn {}
 
+/* フォロー解除ボタン */
 .p-user-profile__follow-cancel-btn {
-    background-color: #9b9b9b;
-    box-shadow: 0 3px 0px #7e7e7e;
+    background-color: #b5b5b5;
+    box-shadow: 0 3px 0px #8d8d8d;
     color: var(--color-white);
 }
 

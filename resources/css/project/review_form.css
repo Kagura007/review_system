@@ -23,6 +23,11 @@
     align-items: center;
 }
 
+.p-review-form__form {
+    /* background-color: red; */
+    margin-inline: auto;
+}
+
 /* 投稿フォーム：入力欄 */
 .p-review-form__item-group {
     /* background-color: pink; */
