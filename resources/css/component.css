@@ -17,6 +17,7 @@
     box-shadow: 0 3px 0px #407ea2;
     color: var(--color-white);
     font-weight: 300;
+    cursor: pointer;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 

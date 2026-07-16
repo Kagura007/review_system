@@ -10,7 +10,7 @@
             {{-- ユーザーニックネーム --}}
             <div class="p-user-profile__user-name">
                 @if (blank($userProfile->nick_name))
-                    名無しさん
+                    {{ __('名無しさん') }}
                 @else
                     {{ $userProfile->nick_name }}
                 @endif
@@ -18,7 +18,7 @@
             {{-- ユーザーID --}}
 
             <div class="p-user-profile__user-id">
-                ユーザーID： {{ $userProfile->file_name }}
+                {{ __('ユーザーID：') }}{{ $userProfile->file_name }}
             </div>
         </div>
 
@@ -28,16 +28,31 @@
     <div class="p-user-profile__description-group">
         <div class="p-user-profile__description">
             @if (blank($userProfile->description))
-                また自己紹介がありません
+                {{ __('まだ自己紹介がありません') }}
             @else
                 {{ $userProfile->description }}
             @endif
         </div>
 
         <div class="p-user-profile__btn-group">
-            <button class="c-button
-                p-user-profile__follow-btn">{{ __('フォローする') }}</button>
-            <button class="c-button p-user-profile__follow-cancel-btn">{{ __('フォロー解除する') }}</button>
+
+            @if (Auth::id() !== $userProfile->user->id) {{-- 自分自身ではない場合 --}}
+                @if (Auth::user()->isFollowing($userProfile->user->id))
+                    {{-- 既にフォローしているか確認 --}}
+                    <form action="{{ route('unfollow', $userProfile->user->id) }}" class="p-user-profile__form"
+                        method="post">
+                        @csrf
+                        <button class="c-button p-user-profile__follow-cancel-btn">{{ __('フォロー解除する') }}</button>
+                    </form>
+                @else
+                    <form action="{{ route('follow', $userProfile->user->id) }}" class="p-user-profile__form"
+                        method="post">
+                        @csrf
+                        <button class="c-button p-user-profile__follow-btn">{{ __('フォローする') }}</button>
+                    </form>
+                @endif
+            @endif
+
         </div>
     </div>
 

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Follower;
 
-class FollowController extends Controller
+class FollowerController extends Controller
 {
     public function follow($id): RedirectResponse
     {

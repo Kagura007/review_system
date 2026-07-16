@@ -78,11 +78,11 @@ class User extends Authenticatable
         return $this->hasMany(Follower::class, 'follower_id');
     }
 
-
-    public function isFollowing($user): bool
+    // ユーザーをフォローしているか確認する
+    public function isFollowing($userId): bool
     {
         return $this->followings()
-            ->where('user_id', $user->id)
+            ->where('user_id', $userId)
             ->exists();
     }
 }

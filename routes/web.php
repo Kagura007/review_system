@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\FollowerController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,6 +30,11 @@ Route::middleware('auth')->group(function () {
 
     // ユーザ プロフィールページ
     Route::get('/user_profile/show/{id}', [UserProfileController::class, 'show'])->name('user_profile.show');
+
+    // フォロー
+    Route::post('/follow/{id}', [FollowerController::class, 'follow'])->name('follow');
+    //Fフォロー解除
+    Route::post('/unfollow/{id}', [FollowerController::class, 'unfollow'])->name('unfollow');
 });
 
 
