@@ -40,7 +40,7 @@ class UserProfileController extends Controller
      */
     public function show(string $id): View
     {
-        $user = User::findOrFail($id);
+        $user = User::with('profile')->find($id);
 
         $userProfile = UserProfile::firstOrCreate(
             ['user_id' => $user->id],

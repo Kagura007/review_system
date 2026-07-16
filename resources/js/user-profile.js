@@ -41,3 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+
+
+// メッセージをふわっと出して消す
+const message = document.querySelector('.message');
+
+if (message) {
+    setTimeout(() => {
+        message.style.opacity = '0';
+
+        setTimeout(() => {
+            message.remove();
+        }, 300);
+
+    }, 3000);
+}

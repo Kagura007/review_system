@@ -1,5 +1,15 @@
 <section class="p-user-profile">
 
+    {{-- フォローメッセージ --}}
+    @if (session('success'))
+        <p class="message p-user-profile__message">{{ session('success') }}</p>
+    @endif
+
+    @if (session('error'))
+        <p class="message p-user-profile__message">{{ session('error') }}</p>
+    @endif
+
+
     <div class="p-user-profile__image-group">
 
         {{-- ユーザー画像 --}}

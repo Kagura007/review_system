@@ -1,4 +1,6 @@
 .p-profile {
+    /* background-color: yellow; */
+    position: relative;
     padding-block: 3rem;
     padding-inline: 2rem;
 }
@@ -6,6 +8,9 @@
 /* プロフィール情報 */
 .p-user-profile {}
 
+.p-user-profile__message {}
+
+/* ユーザー情報エリア */
 .p-user-profile__image-group {
     /* background-color: red; */
     display: flex;
@@ -70,7 +75,7 @@
 }
 
 
-/* 切り替えタグ */
+/* 切り替えタグエリア */
 .p-user-profile__tab-group {
     position: relative;
     display: flex;
@@ -95,9 +100,9 @@
     cursor: pointer;
 }
 
-.p-user-profile__tab--active {
-    /* background-color: #f1f1f1; */
-    font-weight: 400;
+.p-user-profile__tab:hover {
+    background-color: rgba(255, 255, 255, 0.831);
+    border-radius: 4px 4px 0 0;
 }
 
 /* 下線 */

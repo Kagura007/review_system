@@ -14,6 +14,21 @@
     padding-bottom: 3rem;
 }
 
+/* 投稿メッセージ */
+.message--form::after {
+    /* background-color: red; */
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    transform: translate(-50%, 220%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255);
+    z-index: 5;
+}
+
 .p-review-form__title {}
 
 .p-review-form__form-content {

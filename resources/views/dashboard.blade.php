@@ -2,7 +2,7 @@
 
     {{-- セッションに設定したメッセージが入る --}}
     @if (session('success'))
-        <div class="alert alert-success">
+        <div class="message message--form">
             {{ session('success') }}
         </div>
     @endif
