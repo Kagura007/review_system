@@ -76,3 +76,6 @@ DESC ではなく latest() を使用
     @endforelse
 
 ## プロフィールページのタブ切り替えにJavaScript使用
+
+## followersテーブルの２カラムは外部キーに
+ER図ではFKで設定されていない

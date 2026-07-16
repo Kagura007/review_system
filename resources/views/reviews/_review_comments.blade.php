@@ -4,14 +4,14 @@
         <!-- 投稿内容 -->
         <div class="p-review-comment__content">
             <div class="r-c-heder">
-                <div class="r-c-user">
+                <a href="{{ route('user_profile.show', ['id' => $reply->user->id]) }}" class="r-c-user">
                     {{-- ユーザー画像 --}}
                     <img src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="r-c-user-image">
                     {{-- ユーザー名 --}}
                     <span>
                         {{ $reply->user->name }}
                     </span>
-                </div>
+                </a>
 
                 <!-- 日付 -->
                 <div class="p-review-comment__date">

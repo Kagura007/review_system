@@ -63,4 +63,26 @@ class User extends Authenticatable
         // １人のユーザーに対して1個のデータ
         return $this->hasOne(UserProfile::class);
     }
+
+
+    public function followers(): HasMany
+    {
+        // 自分をフォローしているユーザー
+        return $this->hasMany(Follower::class, 'user_id');
+    }
+
+
+    public function followings(): HasMany
+    {
+        // 自分がフォローしているユーザー
+        return $this->hasMany(Follower::class, 'follower_id');
+    }
+
+
+    public function isFollowing($user): bool
+    {
+        return $this->followings()
+            ->where('user_id', $user->id)
+            ->exists();
+    }
 }
