@@ -24,3 +24,10 @@
     box-shadow: 0 0 0 #407ea2;
     transform: translateY(4px);
 }
+
+/* リンク */
+.c-link {
+    margin-right: auto;
+    margin-top: 2rem;
+    color: var(--color-text-secondary);
+}

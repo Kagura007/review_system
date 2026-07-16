@@ -9,16 +9,16 @@
         <div class="p-user-profile__name-group">
             {{-- ユーザーニックネーム --}}
             <div class="p-user-profile__user-name">
-                @if (blank($profile->nick_name))
+                @if (blank($userProfile->nick_name))
                     名無しさん
                 @else
-                    {{ $profile->nick_name }}
+                    {{ $userProfile->nick_name }}
                 @endif
             </div>
             {{-- ユーザーID --}}
 
             <div class="p-user-profile__user-id">
-                ユーザーID： {{ $profile->file_name }}
+                ユーザーID： {{ $userProfile->file_name }}
             </div>
         </div>
 
@@ -27,10 +27,10 @@
     {{-- 自己紹介＋フォローボタン --}}
     <div class="p-user-profile__description-group">
         <div class="p-user-profile__description">
-            @if (blank($profile->description))
+            @if (blank($userProfile->description))
                 また自己紹介がありません
             @else
-                {{ $profile->description }}
+                {{ $userProfile->description }}
             @endif
         </div>
 

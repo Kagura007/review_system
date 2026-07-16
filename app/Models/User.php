@@ -7,6 +7,9 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\UserProfile;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class User extends Authenticatable
 {
@@ -48,8 +51,16 @@ class User extends Authenticatable
     }
 
 
-    public function posts()
+    public function posts(): HasMany
     {
+        // １人のユーザーに対して複数個のデータ
         return $this->hasMany(Post::class);
+    }
+
+
+    public function profile(): HasOne
+    {
+        // １人のユーザーに対して1個のデータ
+        return $this->hasOne(UserProfile::class);
     }
 }

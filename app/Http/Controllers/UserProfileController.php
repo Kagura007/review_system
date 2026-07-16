@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\UserProfile;
 
 class UserProfileController extends Controller
@@ -39,15 +40,24 @@ class UserProfileController extends Controller
      */
     public function show(string $id): View
     {
-        $profile = UserProfile::where('user_id', $id)
-            ->firstOrFail();
+        $user = User::findOrFail($id);
+
+        $userProfile = UserProfile::firstOrCreate(
+            ['user_id' => $user->id],
+            [
+                'nick_name' => $user->name,
+                'file_name' => null,
+                'description' => null,
+            ]
+        );
 
         $reviews = Post::where('user_id', $id)
             ->whereNull('parent_id')
             ->latest()
             ->get();
 
-        return view('user_profile.show', compact('profile', 'reviews'));
+
+        return view('user_profile.show', compact('userProfile', 'reviews'));
     }
 
     /**

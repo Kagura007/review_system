@@ -36,4 +36,7 @@
         <button type="submit" class="c-button p-review-form__button">{{ __('投稿する') }}</button>
     </form>
 
+    {{-- ダッシュボードへのリンク --}}
+    <a href="{{ route('dashboard') }}" class="c-link">タイムラインへ</a>
+
 </section>

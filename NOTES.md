@@ -43,6 +43,9 @@ C:\xampp\htdocs\review_system\resources\views\user_profile\show.blade.php
 ## CSS
 \review_system\resources\css
 
+## JavaScript
+\review_system\resources\js
+
 ## Image
 \review_system\public\images
 

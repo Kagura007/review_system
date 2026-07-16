@@ -116,13 +116,14 @@
 /* 切り替え内容共通 */
 .p-user-profile__tab-content {
     background-color: #e3eef4;
+    margin-block: 2rem;
     padding: 2rem;
     border-radius: 2rem;
 }
 
 /* 投稿済みレビュー一覧 */
 .p-user-profile__review-list {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 /* お気に入り一覧 */

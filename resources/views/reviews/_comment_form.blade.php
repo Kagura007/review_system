@@ -57,7 +57,7 @@
             </div>
 
             <div>
-                @if (is_null($review))
+                {{-- @if (is_null($review))
                     ⭐<select name="evaluation" id="">
                         <option value="1">1つ</option>
                         <option value="2">2つ</option>
@@ -65,18 +65,22 @@
                         <option value="4">4つ</option>
                         <option value="5">5つ</option>
                     </select>
-                @else
-                    {{-- 改善案：コメント → evaluation は NULL --}}
-                    <input type="hidden" name="evaluation" value="1">
-                @endif
+                @else --}}
+                {{-- 改善案：コメント → evaluation は NULL --}}
+                <input type="hidden" name="evaluation" value="1">
+                <input type="hidden" name="parent_id" value="{{ $review->id }}">
+                {{-- @endif --}}
             </div>
 
             <button type="submit" class="c-button p-comment-form__button">{{ __('投稿する') }}</button>
 
-            @if (!is_null($review))
+            {{-- @if (!is_null($review))
                 <input type="hidden" name="parent_id" value="{{ $review->id }}">
-            @endif
+            @endif --}}
         </form>
+
+        {{-- ダッシュボードへのリンク --}}
+        <a href="{{ route('dashboard') }}" class="c-link">タイムラインへ</a>
 
     </div>
 </div>

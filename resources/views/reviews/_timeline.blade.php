@@ -31,14 +31,14 @@
                     </div>
                     <!-- 投稿内容 -->
                     <div class="p-timeline__content">
-                        <div class="p-review-user">
+                        <a href="{{ route('user_profile.show', ['id' => $review->user->id]) }}" class="p-review-user">
                             {{-- ユーザー画像 --}}
                             <img src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="p-review-user-image">
                             {{-- ユーザー名 --}}
                             <span>
                                 {{ $review->user->name }}
                             </span>
-                        </div>
+                        </a>
                         <div class="p-review-card">
                             {{-- 投稿内容 --}}
                             <p>

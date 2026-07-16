@@ -49,18 +49,6 @@
                     </div>
                 </div>
 
-                {{-- レビューへのコメント一覧表示 --}}
-                {{-- @if ($review->reply->isNotEmpty())
-                            @foreach ($review->reply as $reply)
-                                @include('reviews._review_comments', ['reply' => $reply])
-                            @endforeach
-                        @endif
-
-                        <a href="{{ route('reviews.create', $review->id) }}"
-                            class="c-button p-review-list__button-comment">
-                            {{ __('このレビューにコメントする') }}
-                        </a> --}}
-
             </div>
         </article>
 
@@ -73,3 +61,7 @@
 
 {{-- お気にり --}}
 <section class=" p-user-profile__tab-content p-user-profile__favorite-list">ここにお気に入りが表示されます</section>
+
+
+{{-- ダッシュボードへのリンク --}}
+<a href="{{ route('dashboard') }}" class="c-link">タイムラインへ</a>
