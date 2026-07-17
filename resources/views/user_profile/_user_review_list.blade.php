@@ -125,6 +125,8 @@
     </section>
 @endif
 
+<div id="favorite-app"></div>
+
 
 {{-- ダッシュボードへのリンク --}}
 <a href="{{ route('dashboard') }}" class="c-link">タイムラインへ</a>

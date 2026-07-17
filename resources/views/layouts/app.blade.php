@@ -17,7 +17,9 @@
         rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- ここが超重要！必ずviteの上にこれを書く -->
+    @viteReactRefresh
+    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
 </head>
 
 <body class="font-sans antialiased">

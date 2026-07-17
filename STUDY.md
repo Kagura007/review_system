@@ -162,6 +162,20 @@ CSS/画像読み込み
 # 課題提出ラインクリア total 31:15,  total-day 6
 
 
+# React 追加
+## vite Plug-in追加
+npm install -D @vitejs/plugin-react@5
+## vite.config.js書き換え
+jsx対応へ
+## app.js → app.jsx
+        ※User.php保存できていなかったかも、エラーがでたらここに問題があるかもしれない
+## app.blade.php @vite 書き換え
+    <!-- ここが超重要！必ず@viteの上にrefreshを書く -->
+    @viteReactRefresh
+    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
+</head>
+
+
 
 
 
