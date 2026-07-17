@@ -6,7 +6,7 @@
             <div class="r-c-heder">
                 <a href="{{ route('user_profile.show', ['id' => $reply->user->id]) }}" class="r-c-user">
                     {{-- ユーザー画像 --}}
-                    <img src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="r-c-user-image">
+                    <img src="{{ asset('images/user_images/user.png') }}" alt="ユーザーアイコン" class="r-c-user-image">
                     {{-- ユーザー名 --}}
                     <span>
                         {{ $reply->user->name }}

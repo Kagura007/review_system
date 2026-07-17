@@ -135,4 +135,17 @@ Model::firstOrCreate(
 # 次回：口コミ投稿サービスの開発（お気に入り機能の実装）① の解説視聴から
 
 
-# 2026/07/17  current ,  day :,  total :,  total-day 6
+# 2026/07/17  current 13:00,  day :,  total 24:15,  total-day 6
+
+## ★Postcontroller のスペル修正： 時間があったら
+
+
+
+
+
+
+
+# 次回：口コミ投稿サービスの開発（お気に入り機能の実装）◆の解説視聴から
+
+
+# 2026/07/18  current ,  day :,  total :,  total-day 7

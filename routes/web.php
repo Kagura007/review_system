@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -33,8 +34,11 @@ Route::middleware('auth')->group(function () {
 
     // フォロー
     Route::post('/follow/{id}', [FollowerController::class, 'follow'])->name('follow');
-    //Fフォロー解除
+    // フォロー解除
     Route::post('/unfollow/{id}', [FollowerController::class, 'unfollow'])->name('unfollow');
+
+    // お気に入り
+    Route::post('/favorite/{id}', [FavoriteController::class, 'favorite'])->name('favorite');
 });
 
 

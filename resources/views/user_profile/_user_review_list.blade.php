@@ -28,7 +28,7 @@
             <div class="p-timeline__content">
                 <div class="p-review-user">
                     {{-- ユーザー画像 --}}
-                    <img src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="p-review-user-image">
+                    <img src="{{ asset('images/user_images/user.png') }}" alt="ユーザーアイコン" class="p-review-user-image">
                     {{-- ユーザー名 --}}
                     <span>
                         {{ $review->user->name }}

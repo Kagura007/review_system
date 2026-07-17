@@ -13,7 +13,7 @@
     <div class="p-user-profile__image-group">
 
         {{-- ユーザー画像 --}}
-        <image src="{{ asset('images/user.png') }}" alt="ユーザーアイコン" class="p-user-profile__image"></image>
+        <image src="{{ asset('images/user_images/user.png') }}" alt="ユーザーアイコン" class="p-user-profile__image"></image>
 
         {{-- ユーザー名＋ID --}}
         <div class="p-user-profile__name-group">

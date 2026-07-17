@@ -5,13 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Post;
 
 class PostController extends Controller
 {
-    // 投稿画面表示
+    // 投稿画面切り替え表示
     public function create($id): View
     {
         if ($id > -1) {  // $id：URLから受け取った値、「-1」は新規レビュー、整数ならコメントid
