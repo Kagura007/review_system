@@ -148,7 +148,7 @@
     /* background-color: red; */
 }
 
-.p-review-list__button--favorite {
+.p-review-list__button-favorite {
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -156,7 +156,12 @@
     height: auto;
     margin-top: 4px;
     border: none;
+    color: #b9b9b9;
     cursor: pointer;
+}
+
+.p-review-list__button-favorite--action {
+    color: rgb(230, 125, 142);
 }
 
 .p-review-list__button-comment {
