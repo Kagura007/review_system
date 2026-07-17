@@ -102,7 +102,21 @@
                         </div>
                     </div>
 
+                    {{-- お気に入り解除 --}}
+                    <div class="p-user-profile__button--favorite">
+                        <form action="{{ route('unfavorite', $favorite->post_id) }}" method="post"
+                            class="p-review-list__form">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                class="p-review-list__button-favorite p-review-list__button-favorite--action">
+                                @include('components._favorite_heart')
+                            </button>
+                        </form>
+                    </div>
+
                 </div>
+
             </article>
 
         @empty

@@ -133,3 +133,10 @@
 
 /* お気に入り一覧 */
 .p-user-profile__favorite-list {}
+
+.p-user-profile__button--favorite {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
