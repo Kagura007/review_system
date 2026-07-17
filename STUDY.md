@@ -144,6 +144,22 @@ Model::firstOrCreate(
 ### fill="currentColor"
 SVG タグに記述しておくと CSS で色の制御ができるようになる
 
+## お気に入り登録が重い
+だから重く感じる原因は、DB登録そのものより「ページ丸ごと再読み込み」してることが大きい。
+
+Favorite::firstOrCreate() 自体は一瞬。
+
+でも、
+
+dashboardのHTML生成
+投稿一覧取得
+Blade描画
+CSS/画像読み込み
+
+をもう一回全部やってる。
+
+実際のSNS系サイトだとここはよく JavaScript（Ajax / fetch） でやる。
+
 
 
 

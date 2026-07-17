@@ -19,7 +19,9 @@ class FavoriteController extends Controller
             'post_id' => $review->id,
         ]);
 
-        return redirect()->route('dashboard');
+        return redirect()
+            ->route('dashboard')
+            ->withFragment('review-' . $review->id);
     }
 
 
@@ -30,6 +32,8 @@ class FavoriteController extends Controller
             ->where('post_id', $review->id)     // 登録解除したいポスト
             ->delete();
 
-        return redirect()->route('dashboard');
+        return redirect()
+            ->route('dashboard')
+            ->withFragment('review-' . $review->id);
     }
 }

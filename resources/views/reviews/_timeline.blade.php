@@ -19,7 +19,7 @@
         <section class="p-timeline">
             @forelse ($reviews as $review)
                 <!-- 口コミ1件 -->
-                <article class="p-timeline__item">
+                <article id="review-{{ $review->id }}" class="p-timeline__item">
                     <!-- 日付 -->
                     <div class="p-timeline__date">
                         <p>{{ $review->created_at->format('Y/m/d') }}</p>
