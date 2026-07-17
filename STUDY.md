@@ -178,6 +178,6 @@ jsx対応へ
 # React挑戦  day 1,  total 34:45,  total-day 6
 
 
-# 2026/07/18  current ,  day :,  total 33:45,  total-day 7
+# 2026/07/18  current ,  day :,  total 35:15,  total-day 7
 
 ## テストを行う！！

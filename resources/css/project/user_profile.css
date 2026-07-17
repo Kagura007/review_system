@@ -160,3 +160,8 @@
     margin-left: auto;
     color: rgb(230, 125, 142);
 }
+
+#favorite-empty {
+    /* background-color: #8d8d8d; */
+    text-align: center;
+}

@@ -63,8 +63,9 @@
 
 {{-- お気にり一覧 --}}
 @if (Auth::id() === $userProfile->user_id)
-    <section class=" p-user-profile__tab-content p-user-profile__favorite-list">
-        @forelse ($favorites as $favorite)
+    <section id="favorite-list" class=" p-user-profile__tab-content p-user-profile__favorite-list">
+
+        @foreach ($favorites as $favorite)
             <article id="favorite-{{ $favorite->post_id }}" class="p-timeline__item">
                 <!-- 日付 -->
                 <div class="p-timeline__date">
@@ -104,32 +105,23 @@
 
                     {{-- お気に入り解除 --}}
                     <div class="p-user-profile__button--favorite">
-                        {{-- <form action="{{ route('unfavorite', $favorite->post_id) }}" method="post"
-                            class="p-review-list__form"> --}}
-                        {{-- @csrf
-                        @method('DELETE') --}}
-                        {{-- <button type="submit"
-                                class="p-review-list__button-favorite p-review-list__button-favorite--action"> --}}
-                        {{-- @include('components._favorite_heart') --}}
+
                         <div class="favorite-app" data-post-id="{{ $favorite->post_id }}"
                             data-endpoint-url="{{ route('unfavorite', $favorite->post_id) }}">
                         </div>
-                        {{-- </button> --}}
-                        {{-- </form> --}}
+
                     </div>
 
                 </div>
             </article>
+        @endforeach
 
-            {{-- <div id="favorite-app"></div> --}}
-            {{-- <div class="react-favorite" data-post-id="{{ $review->id }}"
-                data-endpoint-url="{{ route('unfavorite', $review->id) }}"> <!-- 💡ここに追記！ -->
-            </div> --}}
+        <p id="favorite-empty" @if ($favorites->isNotEmpty()) style="display:none;" @endif>
+            お気に入りはありません
+        </p>
 
-        @empty
-            <p>お気に入りはありません</p>
-        @endforelse
     </section>
+
 @endif
 
 

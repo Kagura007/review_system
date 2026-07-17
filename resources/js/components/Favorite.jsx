@@ -25,6 +25,12 @@ function Favorite({ postId, endpointUrl }) {
                 article.remove();
             }
         }
+
+        const list = document.getElementById("favorite-list");
+
+        if (list.querySelectorAll("article").length === 0) {
+            document.getElementById("favorite-empty").style.display = "block";
+        }
     };
 
     return (
