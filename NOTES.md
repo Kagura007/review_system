@@ -50,8 +50,9 @@ C:\xampp\htdocs\review_system\resources\views\user_profile\show.blade.php
 \review_system\public\images
 
 
-# How To View  -- 表示方法 --
-● vite 使用のためnpm run dev 必須
+# How To  -- 使用方法 --
+● npm install
+● vite 使用のため npm run dev 必須
 
 
 # Highlights -- 工夫した点 --
@@ -94,3 +95,4 @@ fill に currentColor を指定して CSS で色を変更できるようにし�
 ## お気に入り追加メッセージなし
 ハートボタンの色が変わるのでメッセージなし
 
+## お気に入り一覧から解除する動きを React で作成予定

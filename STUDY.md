@@ -135,7 +135,7 @@ Model::firstOrCreate(
 # 次回：口コミ投稿サービスの開発（お気に入り機能の実装）① の解説視聴から
 
 
-# 2026/07/17  current 20:00,  day 5:00,  total 24:15,  total-day 6
+# 2026/07/17  current ,  day 7:00,  total 24:15,  total-day 6
 
 ## 用語説明
 
@@ -159,10 +159,11 @@ CSS/画像読み込み
 実際のSNS系サイトだとここはよく JavaScript（Ajax / fetch） でやる。
 
 
+# 課題提出ラインクリア total 31:15,  total-day 6
 
 
 
-# 次回：口コミ投稿サービスの開発（お気に入り機能の実装）◆の解説視聴から
+
 
 
 # 2026/07/18  current ,  day :,  total :,  total-day 7
