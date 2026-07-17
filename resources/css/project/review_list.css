@@ -134,7 +134,31 @@
     height: auto;
 }
 
+
+/* お気に入り＋コメントボタン */
+.p-review-list__button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.p-review-list__form {
+    /* background-color: red; */
+}
+
+.p-review-list__button--favorite {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 3rem;
+    height: auto;
+    margin-top: 4px;
+    border: none;
+    cursor: pointer;
+}
+
 .p-review-list__button-comment {
     /* background-color: red; */
-    margin-left: auto;
 }
