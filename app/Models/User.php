@@ -10,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 use App\Models\UserProfile;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use App\Models\Favorite;
 
 class User extends Authenticatable
 {
@@ -51,30 +52,30 @@ class User extends Authenticatable
     }
 
 
+    // １人のユーザーに対して複数個のデータ
     public function posts(): HasMany
     {
-        // １人のユーザーに対して複数個のデータ
         return $this->hasMany(Post::class);
     }
 
 
+    // １人のユーザーに対して1個のデータ
     public function profile(): HasOne
     {
-        // １人のユーザーに対して1個のデータ
         return $this->hasOne(UserProfile::class);
     }
 
 
+    // 自分をフォローしているユーザー
     public function followers(): HasMany
     {
-        // 自分をフォローしているユーザー
         return $this->hasMany(Follower::class, 'user_id');
     }
 
 
+    // 自分がフォローしているユーザー
     public function followings(): HasMany
     {
-        // 自分がフォローしているユーザー
         return $this->hasMany(Follower::class, 'follower_id');
     }
 
@@ -83,6 +84,20 @@ class User extends Authenticatable
     {
         return $this->followings()
             ->where('user_id', $userId)
+            ->exists();
+    }
+
+    // お気に入り一覧を取ってくる
+    public function favorites(): HasMany
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
+    // お気に入りしているか確認する
+    public function isFavorite($postId): bool
+    {
+        return $this->favorites()
+            ->where('post_id', $postId)
             ->exists();
     }
 }

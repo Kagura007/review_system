@@ -66,16 +66,35 @@
                         {{-- お気に入り＋コメントボタン --}}
                         <div class="p-review-list__button-group">
                             {{-- お気に入りボタン --}}
-                            <form action="" class="p-review-list__form">
-                                <button type="submit"
-                                    class="p-review-list__button-favorite p-review-list__button-favorite--action">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.479 62.172">
-                                        <path
-                                            d="M92.02 127.69c-3.797-7.796-10.3-11.942-18.878-11.871-11.044.09-16.69 9.77-17.998 13.623-2.228 6.896-2.527 14.82-.52 19.215 1.731 3.79 3.487 6.197 5.653 8.442 8.267 8.567 20.325 16.94 31.744 20.89m0-50.298c3.797-7.797 10.3-11.943 18.878-11.872 11.044.09 16.69 9.77 17.998 13.623 2.228 6.896 2.527 14.82.52 19.215-1.731 3.79-3.487 6.197-5.653 8.442-8.267 8.567-20.325 16.94-31.743 20.89"
-                                            fill="currentColor" transform="translate(-53.281 -115.818)" />
-                                    </svg>
-                                </button>
-                            </form>
+                            @if (Auth::user()->isFavorite($review->id))
+                                {{-- お気に入り解除 --}}
+                                <form action="{{ route('unfavorite', $review->id) }}" method="post"
+                                    class="p-review-list__form">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="p-review-list__button-favorite p-review-list__button-favorite--action">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.479 62.172">
+                                            <path
+                                                d="M92.02 127.69c-3.797-7.796-10.3-11.942-18.878-11.871-11.044.09-16.69 9.77-17.998 13.623-2.228 6.896-2.527 14.82-.52 19.215 1.731 3.79 3.487 6.197 5.653 8.442 8.267 8.567 20.325 16.94 31.744 20.89m0-50.298c3.797-7.797 10.3-11.943 18.878-11.872 11.044.09 16.69 9.77 17.998 13.623 2.228 6.896 2.527 14.82.52 19.215-1.731 3.79-3.487 6.197-5.653 8.442-8.267 8.567-20.325 16.94-31.743 20.89"
+                                                fill="currentColor" transform="translate(-53.281 -115.818)" />
+                                        </svg>
+                                    </button>
+                                </form>
+                            @else
+                                {{-- お気に入り登録 --}}
+                                <form action="{{ route('favorite', $review->id) }}" method="post"
+                                    class="p-review-list__form">
+                                    @csrf
+                                    <button type="submit" class="p-review-list__button-favorite">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.479 62.172">
+                                            <path
+                                                d="M92.02 127.69c-3.797-7.796-10.3-11.942-18.878-11.871-11.044.09-16.69 9.77-17.998 13.623-2.228 6.896-2.527 14.82-.52 19.215 1.731 3.79 3.487 6.197 5.653 8.442 8.267 8.567 20.325 16.94 31.744 20.89m0-50.298c3.797-7.797 10.3-11.943 18.878-11.872 11.044.09 16.69 9.77 17.998 13.623 2.228 6.896 2.527 14.82.52 19.215-1.731 3.79-3.487 6.197-5.653 8.442-8.267 8.567-20.325 16.94-31.743 20.89"
+                                                fill="currentColor" transform="translate(-53.281 -115.818)" />
+                                        </svg>
+                                    </button>
+                                </form>
+                            @endif
 
                             {{-- コメントボタン --}}
                             <a href="{{ route('reviews.create', $review->id) }}"

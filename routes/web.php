@@ -37,8 +37,10 @@ Route::middleware('auth')->group(function () {
     // フォロー解除
     Route::post('/unfollow/{id}', [FollowerController::class, 'unfollow'])->name('unfollow');
 
-    // お気に入り
-    Route::post('/favorite/{id}', [FavoriteController::class, 'favorite'])->name('favorite');
+    // お気に入り登録  reviewはオブジェクトのまま使える
+    Route::post('/favorite/{review}', [FavoriteController::class, 'favorite'])->name('favorite');
+    // お気に入り解除  reviewはオブジェクトのまま使える
+    Route::delete('/unfavorite/{review}', [FavoriteController::class, 'unfavorite'])->name('unfavorite');
 });
 
 
