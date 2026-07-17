@@ -56,9 +56,18 @@ class UserProfileController extends Controller
             ->latest()
             ->get();
 
+        $favorites = $user->favorites()
+            ->with('post')  // post は Favoriteモデルに書いたリレーション名
+            ->get();
 
-        return view('user_profile.show', compact('userProfile', 'reviews'));
+
+        return view('user_profile.show', compact(
+            'userProfile',
+            'reviews',
+            'favorites'
+        ));
     }
+
 
     /**
      * Show the form for editing the specified resource.

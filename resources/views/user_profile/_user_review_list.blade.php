@@ -3,11 +3,13 @@
         投稿レビュー一覧
     </button>
 
-    <button class="p-user-profile__tab">
-        お気に入り
-    </button>
+    @if (Auth::id() === $userProfile->user_id)
+        <button class="p-user-profile__tab">
+            お気に入り
+        </button>
+        <span class="p-user-profile__indicator"></span>
+    @endif
 
-    <span class="p-user-profile__indicator"></span>
 </div>
 
 <!-- 投稿済みレビュー一覧 -->
@@ -59,8 +61,55 @@
 </section>
 
 
-{{-- お気にり --}}
-<section class=" p-user-profile__tab-content p-user-profile__favorite-list">ここにお気に入りが表示されます</section>
+{{-- お気にり一覧 --}}
+@if (Auth::id() === $userProfile->user_id)
+    <section class=" p-user-profile__tab-content p-user-profile__favorite-list">
+        @forelse ($favorites as $favorite)
+            <article class="p-timeline__item">
+                <!-- 日付 -->
+                <div class="p-timeline__date">
+                    <p>{{ $favorite->post->created_at->format('Y/m/d') }}</p>
+                    <p>{{ $favorite->post->created_at->format('H:i') }}</p>
+                </div>
+                <!-- 線と丸 -->
+                <div class="p-timeline__line">
+                    <span class="p-timeline__circle"></span>
+                </div>
+                <!-- 投稿内容 -->
+                <div class="p-timeline__content">
+                    <div class="p-review-user">
+                        {{-- ユーザー画像 --}}
+                        <img src="{{ asset('images/user_images/user.png') }}" alt="ユーザーアイコン"
+                            class="p-review-user-image">
+                        {{-- ユーザー名 --}}
+                        <span>
+                            {{ $favorite->post->user->name }}
+                        </span>
+                    </div>
+                    <div class="p-review-card">
+                        {{-- 投稿内容 --}}
+                        <p>
+                            {{ $favorite->post->comment }}
+                        </p>
+                        {{-- 評価 --}}
+                        <div class="p-review-star">
+                            {{-- {{ $review->evaluation }} --}}
+
+                            @for ($i = 1; $i <= $favorite->post->evaluation; $i++)
+                                <img src="{{ asset('images/review_star.png') }}" alt="★"
+                                    class="p-review-star-image">
+                            @endfor
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        @empty
+            <p>お気に入りはありません</p>
+        @endforelse
+    </section>
+@endif
 
 
 {{-- ダッシュボードへのリンク --}}
