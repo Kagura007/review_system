@@ -12,28 +12,24 @@ class FavoriteController extends Controller
     // お気に入り登録
     public function favorite(Post $review): RedirectResponse
     {
-        // クリエイトするテーブル
-        Favorite::create([
+        // DBで情報を追加
+        // firstOrCreate()：  データがなければ作る、既にあれば何もしない
+        Favorite::firstOrCreate([
             'user_id' => Auth::id(),
             'post_id' => $review->id,
         ]);
 
-        return redirect()
-            ->route('dashboard')
-            ->with('success', 'お気に入りに登録しました');
+        return redirect()->route('dashboard');
     }
 
 
     // お気に入り解除
     public function unfavorite(Post $review): RedirectResponse
     {
-
         Favorite::where('user_id', Auth::id())  // ログインしているユーザー
             ->where('post_id', $review->id)     // 登録解除したいポスト
             ->delete();
 
-        return redirect()
-            ->route('dashboard')
-            ->with('success', 'お気に入りを解除しました');
+        return redirect()->route('dashboard');
     }
 }

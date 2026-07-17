@@ -139,7 +139,10 @@ Model::firstOrCreate(
 
 ## ★Postcontroller のスペル修正： 時間があったら
 
+## 用語説明
 
+### fill="currentColor"
+SVG タグに記述しておくと CSS で色の制御ができるようになる
 
 
 
