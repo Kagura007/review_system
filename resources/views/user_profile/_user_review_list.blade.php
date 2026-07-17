@@ -65,7 +65,7 @@
 @if (Auth::id() === $userProfile->user_id)
     <section class=" p-user-profile__tab-content p-user-profile__favorite-list">
         @forelse ($favorites as $favorite)
-            <article class="p-timeline__item">
+            <article id="favorite-{{ $favorite->post_id }}" class="p-timeline__item">
                 <!-- 日付 -->
                 <div class="p-timeline__date">
                     <p>{{ $favorite->post->created_at->format('Y/m/d') }}</p>
@@ -104,28 +104,33 @@
 
                     {{-- お気に入り解除 --}}
                     <div class="p-user-profile__button--favorite">
-                        <form action="{{ route('unfavorite', $favorite->post_id) }}" method="post"
-                            class="p-review-list__form">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit"
-                                class="p-review-list__button-favorite p-review-list__button-favorite--action">
-                                @include('components._favorite_heart')
-                            </button>
-                        </form>
+                        {{-- <form action="{{ route('unfavorite', $favorite->post_id) }}" method="post"
+                            class="p-review-list__form"> --}}
+                        {{-- @csrf
+                        @method('DELETE') --}}
+                        {{-- <button type="submit"
+                                class="p-review-list__button-favorite p-review-list__button-favorite--action"> --}}
+                        {{-- @include('components._favorite_heart') --}}
+                        <div class="favorite-app" data-post-id="{{ $favorite->post_id }}"
+                            data-endpoint-url="{{ route('unfavorite', $favorite->post_id) }}">
+                        </div>
+                        {{-- </button> --}}
+                        {{-- </form> --}}
                     </div>
 
                 </div>
-
             </article>
+
+            {{-- <div id="favorite-app"></div> --}}
+            {{-- <div class="react-favorite" data-post-id="{{ $review->id }}"
+                data-endpoint-url="{{ route('unfavorite', $review->id) }}"> <!-- 💡ここに追記！ -->
+            </div> --}}
 
         @empty
             <p>お気に入りはありません</p>
         @endforelse
     </section>
 @endif
-
-<div id="favorite-app"></div>
 
 
 {{-- ダッシュボードへのリンク --}}

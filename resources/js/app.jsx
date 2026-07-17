@@ -13,10 +13,27 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Favorite from './components/Favorite';
 
-const element = document.getElementById('favorite-app');
 
-if (element) {
+// const elements = document.querySelectorAll('.favorite-app');
+
+// elements.forEach((element) => {
+
+//     createRoot(element).render(
+//         <Favorite postId={element.dataset.postId} />
+//     );
+
+// });
+
+// Reactのマウント処理
+const elements = document.querySelectorAll('.favorite-app');
+
+elements.forEach((element) => {
+    // 💡 dataset から postId と一緒に endpointUrl も受け取る
+    const postId = element.dataset.postId;
+    const endpointUrl = element.dataset.endpointUrl;
+
     createRoot(element).render(
-        <Favorite />
+        // 💡 Favoriteコンポーネントに endpointUrl をプロパティとして渡す！
+        <Favorite postId={postId} endpointUrl={endpointUrl} />
     );
-}
+});

@@ -3,22 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewList = document.querySelector('.p-user-profile__review-list');
     const favoriteList = document.querySelector('.p-user-profile__favorite-list');
 
+    if (!reviewList || !favoriteList || tabs.length < 2) {
+        return;
+    }
+
     // 表示切り替え
-    tabs[0].addEventListener('click', () => {
-        tabs[0].classList.add('p-user-profile__tab--active');
-        tabs[1].classList.remove('p-user-profile__tab--active');
+    if (tabs.length >= 2 && reviewList && favoriteList) {
+        tabs[0].addEventListener('click', () => {
+            tabs[0].classList.add('p-user-profile__tab--active');
+            tabs[1].classList.remove('p-user-profile__tab--active');
 
-        reviewList.hidden = false;
-        favoriteList.hidden = true;
-    });
+            reviewList.hidden = false;
+            favoriteList.hidden = true;
+        });
+    }
 
-    tabs[1].addEventListener('click', () => {
-        tabs[1].classList.add('p-user-profile__tab--active');
-        tabs[0].classList.remove('p-user-profile__tab--active');
+    if (tabs.length >= 2 && reviewList && favoriteList) {
+        tabs[1].addEventListener('click', () => {
+            tabs[1].classList.add('p-user-profile__tab--active');
+            tabs[0].classList.remove('p-user-profile__tab--active');
 
-        favoriteList.hidden = false;
-        reviewList.hidden = true;
-    });
+            favoriteList.hidden = false;
+            reviewList.hidden = true;
+        });
+    }
 
     // 初期状態
     favoriteList.hidden = true;

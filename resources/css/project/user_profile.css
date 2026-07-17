@@ -5,6 +5,10 @@
     padding-inline: 2rem;
 }
 
+.p-user-profile__title {
+    margin-top: 0;
+}
+
 /* プロフィール情報 */
 .p-user-profile {}
 
@@ -132,11 +136,27 @@
 }
 
 /* お気に入り一覧 */
-.p-user-profile__favorite-list {}
+.p-user-profile__favorite-list {
+    /* background-color: red; */
+}
+
+.react-favorite {
+    display: flex;
+}
+
+.react-favorite button {
+    width: 3rem;
+    height: auto;
+}
 
 .p-user-profile__button--favorite {
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
+    width: 3rem;
+    height: auto;
+    margin-left: auto;
+    color: rgb(230, 125, 142);
 }

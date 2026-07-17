@@ -1,8 +1,9 @@
 <div class="p-review-list">
 
     <div class="p-review-list__inner">
+        {{-- タイトルセクション --}}
         <section class="p-review-list__title-group">
-            <h1 class="p-review-list__title">Time Line</h1>
+            <h1 class="p-review-list__title">{{ __('Time Line') }}</h1>
         </section>
         <!-- 上部 -->
         <section class="p-review-list__header">

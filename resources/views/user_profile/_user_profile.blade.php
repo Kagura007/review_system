@@ -9,6 +9,11 @@
         <p class="message p-user-profile__message">{{ session('error') }}</p>
     @endif
 
+    {{-- タイトルセクション --}}
+    <section class="p-review-list__title-group">
+        <h1 class="p-review-list__title p-user-profile__title">{{ __('My Profile') }}</h1>
+    </section>
+
 
     <div class="p-user-profile__image-group">
 

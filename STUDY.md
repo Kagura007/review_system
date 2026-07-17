@@ -173,11 +173,11 @@ jsx対応へ
     <!-- ここが超重要！必ず@viteの上にrefreshを書く -->
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.jsx'])
-</head>
+## 「画面遷移せずにUIだけ更新できる」実装完了！
+
+# React挑戦  day 1,  total 34:45,  total-day 6
 
 
+# 2026/07/18  current ,  day :,  total 33:45,  total-day 7
 
-
-
-
-# 2026/07/18  current ,  day :,  total :,  total-day 7
+## テストを行う！！
