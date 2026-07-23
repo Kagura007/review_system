@@ -59,6 +59,7 @@ npm run dev
 php artisan serve
 ```
 
+<!--
 ## スクリーンショット
 
 ### ダッシュボード
@@ -76,3 +77,4 @@ php artisan serve
 ### プロフィール
 
 ![プロフィール](docs/images/profile.png)
+-->
