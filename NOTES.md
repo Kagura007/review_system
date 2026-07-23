@@ -35,7 +35,7 @@ C:\xampp\htdocs\review_system\resources\views\reviews\_review_comments.blade.php
 C:\xampp\htdocs\review_system\resources\views\reviews\create.blade.php
 ##### レビュー投稿フォーム
 C:\xampp\htdocs\review_system\resources\views\reviews\_form.blade.php
-##### コメント投稿フォーム（※投稿フォームとデザインが違ったため、別ファイルにしています）
+##### コメント投稿フォーム
 C:\xampp\htdocs\review_system\resources\views\reviews\_comment_form.blade.php
 
 #### プロフィールページ
@@ -81,7 +81,6 @@ DESC ではなく latest() を使用
 ### プロフィールページのタブ切り替えにJavaScript使用
 
 ### followersテーブルの２カラムは外部キーに
-ER図ではFKで設定されていない
 
 ### フォローメッセージのふわっと出てきて消えるアニメーション
 css キーフレーム ＋ js
@@ -91,8 +90,7 @@ css キーフレーム ＋ js
 fill に currentColor を指定して CSS で色を変更できるようにした
 
 ### お気に入り登録・解除でコメントの位置に戻る
-実装：id制御（ずれる）
-理想：押した場所をそのまま維持する方法（Ajax）
+実装：id制御
 
 ### お気に入り追加メッセージなし
 ハートボタンの色が変わるのでメッセージなし
