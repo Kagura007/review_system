@@ -9,7 +9,9 @@
     align-items: center;
     width: 1200px;
     margin-inline: auto;
-    margin-block: 3rem;
+    padding-inline: 2rem;
+    padding-block: 3rem;
+
 }
 
 .p-review-list__title-group {
