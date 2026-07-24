@@ -45,6 +45,9 @@ Route::middleware('auth')->group(function () {
     // 投稿削除
     Route::delete('/reviews/{review}', [PostController::class, 'destroy'])
         ->name('reviews.destroy');
+
+    // ガイド画面
+    Route::view('/guide', 'guide')->name('guide');
 });
 
 

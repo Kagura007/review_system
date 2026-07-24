@@ -19,6 +19,10 @@
                     <x-nav-link :href="route('user_profile.show', Auth::id())" :active="request()->routeIs('user_profile.show')">
                         {{ __('My Profile') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('guide')" :active="request()->routeIs('guide')">
+                        {{ __('Guide') }}
+                    </x-nav-link>
                 </div>
             </div>
 

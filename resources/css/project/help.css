@@ -1,0 +1,27 @@
+.p-guide {
+    max-width: 600px;
+    padding-block: 3rem;
+}
+
+.p-guide__section {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #6a9dbb;
+}
+
+.p-guide__section--intro {
+    margin-top: 3rem;
+}
+
+.p-guide__heading {
+    font-weight: 400;
+}
+
+.p-guide__paragraph {
+    margin: 0;
+}
+
+.p-guide__section--closing {
+    margin-top: 4rem;
+    border-bottom: none;
+}
