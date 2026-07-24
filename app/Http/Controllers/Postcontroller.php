@@ -111,6 +111,44 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()->route('user_profile.show', $post->user_id)
-            ->with('success', 'レビューを削除しました');
+            ->with('success', '投稿を削除しました');
+    }
+
+
+    // 投稿編集
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+
+        if ($post->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        return view('reviews.edit', compact('post'));
+    }
+
+
+    // 更新処理
+    public function update(Request $request, $id)
+    {
+        $post = Post::findOrFail($id);
+
+        if ($post->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        $request->validate([
+            'comment' => ['required', 'string', 'max:1000'],
+            'evaluation' => ['required', 'integer']
+        ]);
+
+        $post->update([
+            'comment' => $request->comment,
+            'evaluation' => $request->evaluation,
+        ]);
+
+        return redirect()
+            ->route('user_profile.show', Auth::id())
+            ->with('success', '投稿を編集しました');
     }
 }

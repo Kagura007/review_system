@@ -53,19 +53,26 @@
                     </div>
                 </div>
 
-                {{-- 投稿削除ボタン --}}
-                <form action="{{ route('reviews.destroy', $review->id) }}" method="post"
-                    onsubmit="return confirm('このレビューを削除しますか？')" class="p-review-list__button-group js-delete-form">
 
-                    @csrf
-                    @method('DELETE')
+                <div class="p-review-list__button-group">
+                    <a href="{{ route('reviews.edit', $review->id) }}" class="c-button p-review-list__button">
+                        {{ __('編集する') }}
+                    </a>
 
-                    @if (Auth::id() === $review->user_id)
-                        <button type="submit" class="c-button p-review-list__button-comment">
-                            {{ __('このレビューを削除する') }}
-                        </button>
-                    @endif
-                </form>
+                    {{-- 投稿削除ボタン --}}
+                    <form action="{{ route('reviews.destroy', $review->id) }}" method="post"
+                        onsubmit="return confirm('このレビューを削除しますか？')" class="p-review-list__button-group js-delete-form">
+
+                        @csrf
+                        @method('DELETE')
+
+                        @if (Auth::id() === $review->user_id)
+                            <button type="submit" class="c-button p-review-list__button-comment">
+                                {{ __('このレビューを削除する') }}
+                            </button>
+                        @endif
+                    </form>
+                </div>
 
             </div>
         </article>

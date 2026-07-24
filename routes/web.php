@@ -48,6 +48,14 @@ Route::middleware('auth')->group(function () {
 
     // ガイド画面
     Route::view('/guide', 'guide')->name('guide');
+
+    // 投稿編集
+    Route::get('/reviews/{id}/edit', [PostController::class, 'edit'])
+        ->name('reviews.edit');
+
+    // 投稿更新
+    Route::put('/reviews/{id}', [PostController::class, 'update'])
+        ->name('reviews.update');
 });
 
 
