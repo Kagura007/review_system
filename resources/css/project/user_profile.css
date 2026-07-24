@@ -1,22 +1,13 @@
+/* プロフィールページ */
 .p-profile {
-    /* background-color: yellow; */
     position: relative;
     padding-block: 3rem;
     padding-inline: 2rem;
 }
 
-.p-user-profile__title {
-    margin-top: 0;
-}
-
-/* プロフィール情報 */
-.p-user-profile {}
-
-.p-user-profile__message {}
 
 /* ユーザー情報エリア */
 .p-user-profile__image-group {
-    /* background-color: red; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -30,18 +21,12 @@
     border-radius: 50%;
 }
 
-.p-user-profile__name-group {
-    /* background-color: pink; */
-}
-
 .p-user-profile__user-name {
-    /* background-color: beige; */
     line-height: 1;
     font-weight: 600;
 }
 
 .p-user-profile__user-id {
-    /* background-color: rgb(100, 100, 211); */
     padding-top: 0.3rem;
     line-height: 1;
     color: var(--color-tex-light);
@@ -49,7 +34,6 @@
 }
 
 .p-user-profile__description-group {
-    /* background-color: goldenrod; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -57,7 +41,6 @@
     margin-top: 1rem;
 }
 
-.p-user-profile__description {}
 
 /* フォローボタン グループ */
 .p-user-profile__btn-group {
@@ -69,7 +52,6 @@
     margin-left: 3rem;
 }
 
-.p-user-profile__follow-btn {}
 
 /* フォロー解除ボタン */
 .p-user-profile__follow-cancel-btn {
@@ -130,15 +112,8 @@
     border-radius: 2rem;
 }
 
-/* 投稿済みレビュー一覧 */
-.p-user-profile__review-list {
-    /* margin-top: 2rem; */
-}
 
-/* お気に入り一覧 */
-.p-user-profile__favorite-list {
-    /* background-color: red; */
-}
+/* お気に入りボタン */
 
 .react-favorite {
     display: flex;
@@ -162,6 +137,5 @@
 }
 
 #favorite-empty {
-    /* background-color: #8d8d8d; */
     text-align: center;
 }

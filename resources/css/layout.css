@@ -1,6 +1,5 @@
 .l-header,
 .l-footer {
-    /* background-color: #ddd; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -9,12 +8,7 @@
     height: 80px;
 }
 
-.l-header-inner {}
-
-.l-footer-inner {}
-
 .l-container {
-    /* background-color: #ddd; */
     width: 100%;
     max-width: 1200px;
     margin-inline: auto;

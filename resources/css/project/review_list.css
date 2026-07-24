@@ -7,20 +7,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    width: 1200px;
     margin-inline: auto;
-    margin-bottom: 3rem;
+    margin-block: 3rem;
 }
 
 .p-review-list__title-group {
-    /* background-color: #666; */
     margin-right: auto;
 }
 
-.p-review-list__title {}
-
 .p-review-list__header {
-    /* background-color: red; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -30,14 +26,8 @@
 }
 
 /* 投稿フォームへのリンク */
-.review-list__button {}
-
-.review-list__button:active {}
-
-.p-timeline {}
 
 .p-timeline__item {
-    /* background-color: #f2e0b28d; */
     display: grid;
     grid-template-columns: 90px 20px 1fr;
     gap: 20px
@@ -52,19 +42,16 @@
 }
 
 .p-timeline__date p:nth-child(1) {
-    /* background-color: #4ac36061; */
     margin-bottom: 0;
 }
 
 .p-timeline__date p:nth-child(2) {
-    /* background-color: #b54ac373; */
     margin-top: 0;
     line-height: 0.9rem;
 }
 
 /* 緑の丸と線 */
 .p-timeline__line {
-    /* background-color: #666; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -90,7 +77,6 @@
 
 /* ユーザー画像＋投稿内容 */
 .p-timeline__content {
-    /* background-color: #efcb70c2; */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -144,10 +130,6 @@
     gap: 1rem;
 }
 
-.p-review-list__form {
-    /* background-color: red; */
-}
-
 .p-review-list__button-favorite {
     background-color: transparent;
     display: flex;
@@ -162,8 +144,4 @@
 
 .p-review-list__button-favorite--action {
     color: rgb(230, 125, 142);
-}
-
-.p-review-list__button-comment {
-    /* background-color: red; */
 }
