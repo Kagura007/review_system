@@ -50,6 +50,29 @@ class PostController extends Controller
             ]
         );
 
+        // NGワード
+        $ngWords = [
+            '死',
+            '殺',
+            'ばか',
+            'バカ',
+            '馬鹿',
+            'アホ',
+            'くたばれ',
+            'うんち',
+            '糞',
+        ];
+
+        foreach ($ngWords as $word) {
+            if (str_contains($request->comment, $word)) {
+                return back()
+                    ->withInput()
+                    ->withErrors([
+                        'comment' => '使用できない言葉が含まれています。'
+                    ]);
+            }
+        }
+
         //投稿作成
         Post::create([
             'user_id'    => Auth::id(),
