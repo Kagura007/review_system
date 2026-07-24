@@ -1,3 +1,13 @@
+{{-- レビュー投稿フォーム --}}
+
+
+{{-- エラーメッセージ --}}
+@if (session('error'))
+    <div class="c-error">
+        {{ session('error') }}
+    </div>
+@endif
+
 <section class="p-review-form__form-content">
 
     {{-- 入力フォーム --}}

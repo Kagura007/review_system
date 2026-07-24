@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Models\Post;
 
-use function Laravel\Prompts\confirm;
 
 class PostController extends Controller
 {
@@ -29,8 +28,16 @@ class PostController extends Controller
     }
 
 
+    // 投稿保存
     public function store(Request $request): RedirectResponse
     {
+        // 投稿制限10回まで
+        $count = Post::where('user_id', Auth::id())->count();
+
+        if ($count >= 10) {
+            return back()->with('error', 'デモサイトのため、コメントを含め投稿は10件までです。');
+        }
+
         // バリデーション
         $request->validate(
             [
