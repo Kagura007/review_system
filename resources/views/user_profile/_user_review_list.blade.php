@@ -1,4 +1,7 @@
-<div class="p-user-profile__tab-group">
+{{-- プロフィール画面のユーザー投稿一覧 --}}
+
+{{-- 切り替えタブエリア --}}
+<div class="p-user-profile__tab-group {{ Auth::id() === $userProfile->user->id ? 'is-owner' : 'is-other-user' }}">
     <button class="p-user-profile__tab  p-user-profile__tab--active">
         投稿レビュー一覧
     </button>
