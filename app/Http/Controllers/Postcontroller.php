@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Models\Post;
 
+use function Laravel\Prompts\confirm;
+
 class PostController extends Controller
 {
     // 投稿画面切り替え表示
@@ -53,6 +55,7 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with('success', '投稿が完了しました！');
     }
 
+
     //ダッシュボードの表示
     public function index()
     {
@@ -62,5 +65,22 @@ class PostController extends Controller
             ->get();
 
         return view('dashboard', compact('reviews'));
+    }
+
+
+    // 投稿削除
+    public function destroy($id): RedirectResponse
+    {
+        $post = Post::findOrFail($id);
+
+        // 本人以外が削除できない
+        if ($post->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        $post->delete();
+
+        return redirect()->route('user_profile.show', $post->user_id)
+            ->with('success', 'レビューを削除しました');
     }
 }

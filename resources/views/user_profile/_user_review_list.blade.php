@@ -46,7 +46,6 @@
                     </p>
                     {{-- 評価 --}}
                     <div class="p-review-star">
-                        {{-- {{ $review->evaluation }} --}}
 
                         @for ($i = 1; $i <= $review->evaluation; $i++)
                             <img src="{{ asset('images/review_star.png') }}" alt="★" class="p-review-star-image">
@@ -54,8 +53,23 @@
                     </div>
                 </div>
 
+                {{-- 投稿削除ボタン --}}
+                <form action="{{ route('reviews.destroy', $review->id) }}" method="post"
+                    onsubmit="return confirm('このレビューを削除しますか？')" class="p-review-list__button-group">
+
+                    @csrf
+                    @method('DELETE')
+
+                    @if (Auth::id() === $review->user_id)
+                        <button type="submit" class="c-button p-review-list__button-comment">
+                            {{ __('このレビューを削除する') }}
+                        </button>
+                    @endif
+                </form>
+
             </div>
         </article>
+
 
     @empty
         <p class="p-timeline__empty">{{ __('まだ投稿がありません') }}</p>

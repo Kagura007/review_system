@@ -41,6 +41,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/favorite/{review}', [FavoriteController::class, 'favorite'])->name('favorite');
     // お気に入り解除  reviewはオブジェクトのまま使える
     Route::delete('/unfavorite/{review}', [FavoriteController::class, 'unfavorite'])->name('unfavorite');
+
+    // 投稿削除
+    Route::delete('/reviews/{review}', [PostController::class, 'destroy'])
+        ->name('reviews.destroy');
 });
 
 

@@ -100,6 +100,4 @@ class User extends Authenticatable
             ->where('post_id', $postId)
             ->exists();
     }
-
-    //
 }
