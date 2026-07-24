@@ -19,7 +19,7 @@
 <section class="p-timeline p-user-profile__tab-content p-user-profile__review-list">
     @forelse ($reviews as $review)
         <!-- 口コミ1件 -->
-        <article class="p-timeline__item">
+        <article id="post-{{ $review->id }}" class="p-timeline__item">
             <!-- 日付 -->
             <div class="p-timeline__date">
                 <p>{{ $review->created_at->format('Y/m/d') }}</p>
@@ -55,7 +55,7 @@
 
                 {{-- 投稿削除ボタン --}}
                 <form action="{{ route('reviews.destroy', $review->id) }}" method="post"
-                    onsubmit="return confirm('このレビューを削除しますか？')" class="p-review-list__button-group">
+                    onsubmit="return confirm('このレビューを削除しますか？')" class="p-review-list__button-group js-delete-form">
 
                     @csrf
                     @method('DELETE')

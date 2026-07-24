@@ -1,10 +1,8 @@
-console.log("Favorite 読み込まれた");
-
-// Propsに endpointUrl を追加するよ
+// Propsに endpointUrl を追加
 function Favorite({ postId, endpointUrl }) {
 
     const handleDelete = async () => {
-        // 💡 ここを、受け取った endpointUrl に書き換える！
+        // 💡 ここを、受け取った endpointUrl に書き換える
         const response = await fetch(
             endpointUrl,
             {
