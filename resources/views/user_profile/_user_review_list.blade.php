@@ -53,26 +53,26 @@
                     </div>
                 </div>
 
+                @if (Auth::id() === $review->user_id)
+                    <div class="p-review-list__button-group">
+                        <a href="{{ route('reviews.edit', $review->id) }}" class="c-button p-review-list__button">
+                            {{ __('編集する') }}
+                        </a>
 
-                <div class="p-review-list__button-group">
-                    <a href="{{ route('reviews.edit', $review->id) }}" class="c-button p-review-list__button">
-                        {{ __('編集する') }}
-                    </a>
+                        {{-- 投稿削除ボタン --}}
+                        <form action="{{ route('reviews.destroy', $review->id) }}" method="post"
+                            onsubmit="return confirm('このレビューを削除しますか？')"
+                            class="p-review-list__button-group js-delete-form">
 
-                    {{-- 投稿削除ボタン --}}
-                    <form action="{{ route('reviews.destroy', $review->id) }}" method="post"
-                        onsubmit="return confirm('このレビューを削除しますか？')" class="p-review-list__button-group js-delete-form">
+                            @csrf
+                            @method('DELETE')
 
-                        @csrf
-                        @method('DELETE')
-
-                        @if (Auth::id() === $review->user_id)
                             <button type="submit" class="c-button p-review-list__button-comment">
                                 {{ __('このレビューを削除する') }}
                             </button>
-                        @endif
-                    </form>
-                </div>
+                        </form>
+                    </div>
+                @endif
 
             </div>
         </article>
@@ -141,7 +141,7 @@
         @endforeach
 
         <p id="favorite-empty" @if ($favorites->isNotEmpty()) style="display:none;" @endif>
-            お気に入りはありません
+            {{ __('お気に入りはありません') }}
         </p>
 
     </section>
@@ -150,4 +150,4 @@
 
 
 {{-- ダッシュボードへのリンク --}}
-<a href="{{ route('dashboard') }}" class="c-link">タイムラインへ</a>
+<a href="{{ route('dashboard') }}" class="c-link">{{ __('タイムラインへ') }}</a>
