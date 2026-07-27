@@ -12,8 +12,10 @@
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
     <!-- Styles / Scripts -->
+    @viteReactRefresh
+
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.jsx'])
     @endif
 </head>
 
@@ -62,19 +64,33 @@
     </header>
 
 
-    <main class="welcome bg-[#DDDDDD] mt-24 lg:max-w-4xl max-w-[480px]">
-        <section>
-            <h1 class="welcome__title">
-                <div class="welcome__title-parts">{{ __('口コミ投稿サイト') }}</div>
-                <div class="welcome__title-parts">{{ __('（ポートフォリオデモ）') }}</div>
+    <main class="bg-[#DDDDDD] mt-24 lg:max-w-4xl max-w-[480px]">
+
+        {{-- 挨拶エリア --}}
+        <section class="welcome-intro">
+            <h1 class="welcome-intro__title">
+                <div class="welcome-intro__title-parts">{{ __('口コミ投稿サイト') }}</div>
+                <div class="welcome-intro__title-parts">{{ __('（ポートフォリオデモ）') }}</div>
             </h1>
-            <span>{{ __('ようこそ、口コミ投稿サイト体験版へ') }}</span>
-            <p>{{ __('このサイトはポートフォリオ用のデモサイトです。') }}</p>
+
+            <span class="mt-8">
+                {{ __('ようこそ、口コミ投稿サイト体験版へ') }}
+            </span>
+
+            <p>{{ __('このサイトはポートフォリオ用に制作したデモサイトです。') }}</p>
         </section>
 
-        <section>
-            ログイン・新規登録
+        {{-- ログイン・新規作成ボタンエリア --}}
+        <section class="welcome__auth flex justify-center items-center gap-8">
+            <a class="c-button" href="{{ route('login') }}">
+                {{ __('ログイン') }}
+            </a>
+
+            <a class="c-button" href="{{ route('register') }}">
+                {{ __('新規登録') }}
+            </a>
         </section>
+
     </main>
 
     <footer class="bg-[#FFFFFF] w-full lg:max-w-4xl max-w-[480px] mt-24 text-ms text-center">

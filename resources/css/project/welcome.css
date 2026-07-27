@@ -1,3 +1,7 @@
+/* ウェルカムページ */
+
+
+/* タイトル */
 .welcome__title {
     font-size: clamp(1.5rem, 4vw, 3rem);
 }
@@ -19,3 +23,7 @@
         text-align: end;
     }
 }
+
+
+/* ログイン・新規登録ボタン */
+.welcome__auth {}
