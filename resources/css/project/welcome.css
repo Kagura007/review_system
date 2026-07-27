@@ -2,25 +2,35 @@
 
 
 /* タイトル */
-.welcome__title {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+.welcome-intro__title {
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
-.welcome__title-parts {
+.welcome-intro__title-parts {
     display: inline;
 }
 
-.welcome__title-parts:nth-child(2) {
-    font-size: clamp(1.2rem, 3vw, 2rem);
+.welcome-intro__title-parts:nth-child(2) {
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 @media screen and (max-width: 1152px) {
-    .welcome__title-parts {
+    .welcome-intro__title-parts {
         display: block;
     }
 
-    .welcome__title-parts:nth-child(2) {
+    .welcome-intro__title-parts:nth-child(2) {
         text-align: end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-intro__title {
+        text-align: center;
+    }
+
+    .welcome-intro__title-parts:nth-child(2) {
+        text-align: center;
     }
 }
 

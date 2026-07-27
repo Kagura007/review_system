@@ -23,7 +23,7 @@
     class="bg-[#CDE6F4] dark:bg-[#0a0a0a] text-[#333333] flex p-6 lg:p-8 items-center lg:justify-start min-h-screen flex-col">
 
     {{-- ヘッダー --}}
-    <header class="fixed w-full lg:max-w-4xl max-w-[480px] bg-[#FFFFFF] text-sm mb-6 not-has-[nav]:hidden">
+    <header class="fixed w-full lg:max-w-4xl max-w-[480px] text-sm mb-6 not-has-[nav]:hidden">
 
         @if (Route::has('login'))
 
@@ -64,16 +64,16 @@
     </header>
 
 
-    <main class="bg-[#DDDDDD] mt-24 lg:max-w-4xl max-w-[480px]">
+    <main class="flex-1 mt-24 lg:max-w-4xl max-w-[480px]">
 
         {{-- 挨拶エリア --}}
-        <section class="welcome-intro">
+        <section class="welcome-intro flex flex-col items-center">
             <h1 class="welcome-intro__title">
-                <div class="welcome-intro__title-parts">{{ __('口コミ投稿サイト') }}</div>
-                <div class="welcome-intro__title-parts">{{ __('（ポートフォリオデモ）') }}</div>
+                <span class="welcome-intro__title-parts">{{ __('口コミ投稿サイト') }}</span>
+                <span class="welcome-intro__title-parts">{{ __('（ポートフォリオデモ）') }}</span>
             </h1>
 
-            <span class="mt-8">
+            <span class="bg-white/80 inline-block mt-12 px-8 text-xl text-center">
                 {{ __('ようこそ、口コミ投稿サイト体験版へ') }}
             </span>
 
@@ -81,7 +81,7 @@
         </section>
 
         {{-- ログイン・新規作成ボタンエリア --}}
-        <section class="welcome__auth flex justify-center items-center gap-8">
+        <section class="welcome__auth flex justify-center items-center gap-8 mt-12">
             <a class="c-button" href="{{ route('login') }}">
                 {{ __('ログイン') }}
             </a>
@@ -93,7 +93,7 @@
 
     </main>
 
-    <footer class="bg-[#FFFFFF] w-full lg:max-w-4xl max-w-[480px] mt-24 text-ms text-center">
+    <footer class="w-full lg:max-w-4xl max-w-[480px] mt-24 text-ms text-center">
         {{ __('© 2026 Portfolio Demo') }}
     </footer>
 
