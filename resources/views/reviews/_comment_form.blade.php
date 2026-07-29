@@ -6,7 +6,7 @@
 
         <!-- コメントしたいレビュー -->
         <section class="p-timeline">
-            {{-- @forelse ($posts as $post) --}}
+
             <!-- 口コミ1件 -->
             <article class="p-timeline__item">
                 <!-- 日付 -->

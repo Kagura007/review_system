@@ -8,7 +8,7 @@
                     {{ __('Post a comment') }}
                 </h1>
 
-                <p>{{ __('このレビューに対するコメントを投稿できます。') }}</p>
+                <p class="p-review-form__inner--p">{{ __('このレビューに対するコメントを投稿できます。') }}</p>
 
                 @include('reviews._comment_form')
             </div>
