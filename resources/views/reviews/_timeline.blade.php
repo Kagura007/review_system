@@ -58,11 +58,13 @@
                         </div>
 
                         {{-- レビューへのコメント一覧表示 --}}
-                        @if ($review->reply->isNotEmpty())
-                            @foreach ($review->reply as $reply)
-                                @include('reviews._review_comments', ['reply' => $reply])
-                            @endforeach
-                        @endif
+                        <div class="p-review-comments">
+                            @if ($review->reply->isNotEmpty())
+                                @foreach ($review->reply as $reply)
+                                    @include('reviews._review_comments', ['reply' => $reply])
+                                @endforeach
+                            @endif
+                        </div>
 
                         {{-- お気に入り＋コメントボタン --}}
                         <div class="p-review-list__button-group">

@@ -1,3 +1,10 @@
+/* --- コメントのスタイル --- */
+
+
+.p-review-comments {
+    display: contents;
+}
+
 .p-review-comment {
     list-style: none;
     margin-bottom: 0;
@@ -57,4 +64,27 @@
 
 .p-review-comment__card p {
     margin: 0;
+}
+
+
+
+/* ディスプレイ600px以下 */
+@media screen and (max-width: 600px) {
+    .p-review-comments {
+        grid-area: comment;
+        display: block;
+    }
+
+    .p-review-comment {
+        width: 100%;
+        height: auto;
+    }
+
+    .r-c-user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        font-size: 0.95rem;
+    }
 }

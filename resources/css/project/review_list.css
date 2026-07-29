@@ -8,11 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1200px;
+    max-width: 1200px;
     margin-inline: auto;
     padding-inline: 2rem;
     padding-block: 3rem;
-
 }
 
 .p-review-list__title-group {
@@ -32,8 +31,8 @@
     margin-right: auto;
 }
 
-/* 投稿フォームへのリンク */
 
+/* 投稿内容 */
 .p-timeline__item {
     display: grid;
     grid-template-columns: 90px 20px 1fr;
@@ -151,4 +150,76 @@
 
 .p-review-list__button-favorite--action {
     color: rgb(230, 125, 142);
+}
+
+
+
+/* ディスプレイ600px以下 */
+@media screen and (max-width: 600px) {
+
+    .p-review-list__inner {
+        padding-inline: 1rem;
+        padding-block: 0;
+    }
+
+    /* 投稿内容 */
+    .p-timeline__item {
+        grid-template-columns: 140px minmax(0, 1fr);
+        grid-template-areas:
+            "date    user"
+            "content content"
+            "button  button"
+            "comment comment";
+        gap: 20px;
+        margin-top: 2rem;
+    }
+
+    .p-timeline__item+.p-timeline__item {
+        padding-top: 3rem;
+    }
+
+    /* 日時 */
+    .p-timeline__date {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: flex-start;
+        grid-area: date;
+        gap: 1rem;
+    }
+
+    .p-timeline__date p {
+        margin-top: 0;
+        padding-top: 0.5rem;
+        line-height: 1;
+    }
+
+    /* 緑の丸と線 */
+    .p-timeline__line {
+        display: none;
+    }
+
+    /* ユーザー画像＋投稿内容 */
+    .p-timeline__content {
+        display: contents;
+    }
+
+    .p-review-user {
+        grid-area: user;
+    }
+
+    .p-review-user-image {
+        width: 30px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .p-review-card {
+        grid-area: content;
+    }
+
+    /* お気に入り＋コメントボタン */
+    .p-review-list__button-group {
+        grid-area: button;
+    }
 }
