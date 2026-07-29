@@ -1,6 +1,10 @@
 {{-- レビュー投稿フォーム --}}
 
 
+@push('styles')
+    @vite('resources/css/project/review_form.css')
+@endpush
+
 {{-- エラーメッセージ --}}
 @if (session('error'))
     <div class="c-error">

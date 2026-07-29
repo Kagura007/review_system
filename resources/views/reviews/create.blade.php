@@ -1,3 +1,11 @@
+{{-- フォームの共通レイアウト --}}
+
+
+@push('styles')
+    @vite('resources/css/project/review_list.css')
+@endpush
+
+
 <x-app-layout>
 
     <div class="p-review-form">

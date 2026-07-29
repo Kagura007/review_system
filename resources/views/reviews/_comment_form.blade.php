@@ -1,5 +1,10 @@
 {{-- コメント投稿フォーム --}}
 
+
+@push('styles')
+    @vite('resources/css/project/comment_form.css')
+@endpush
+
 <div class="p-review-list">
 
     <div class="p-review-list__inner">

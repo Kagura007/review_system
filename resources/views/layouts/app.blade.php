@@ -20,6 +20,9 @@
     <!-- ここが超重要！必ずviteの上にこれを書く -->
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.jsx'])
+
+    <!-- SCC -->
+    @stack('styles')
 </head>
 
 <body class="font-sans antialiased">

@@ -1,17 +1,13 @@
+/* --- コメント投稿フォームのスタイル --- */
+
 /* フォーム共通 */
-
-.p-review-form__title {
-    margin-bottom: 0;
-    padding-block: 0;
-}
-
 .p-review-list__inner {
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 1rem
 }
 
-.p-review-form__inner--p {
-    margin-top: 0;
+.p-timeline__item {
+    padding: 0;
 }
 
 
@@ -87,6 +83,21 @@
 
 
 @media screen and (max-width: 480px) {
+    .p-review-form__title {
+        margin-bottom: 0;
+        padding-block: 0;
+    }
+
+    .p-review-list__inner {
+        padding-top: 1rem;
+    }
+
+    .p-review-form__inner--p {
+        margin-top: 0;
+    }
+
+
+
     .p-review-list__inner {
         padding-inline: 0;
     }
