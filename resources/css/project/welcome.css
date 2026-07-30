@@ -4,6 +4,7 @@
 /* タイトル */
 .welcome-intro__title {
     font-size: clamp(2rem, 4vw, 3rem);
+    text-shadow: 2px 2px 2px #0000003f;
 }
 
 .welcome-intro__title-parts {
@@ -14,6 +15,39 @@
     font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
+/* ウェルカムメッセージ */
+.welcome-intro__message {
+    background: linear-gradient(to bottom, #fff, #869cb15d);
+    animation: slideIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.welcome-intro__description {
+    margin-top: 2rem;
+}
+
+.welcome-intro__description p {
+    margin: 0;
+}
+
+.welcome-intro__description p+p {
+    margin-top: 0.5rem;
+}
+
+
+/* ディスプレイ1152px以下 */
 @media screen and (max-width: 1152px) {
     .welcome-intro__title-parts {
         display: block;
@@ -24,6 +58,7 @@
     }
 }
 
+/* ディスプレイ768px以下 */
 @media screen and (max-width: 768px) {
     .welcome-intro__title {
         text-align: center;
@@ -33,7 +68,3 @@
         text-align: center;
     }
 }
-
-
-/* ログイン・新規登録ボタン */
-.welcome__auth {}

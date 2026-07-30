@@ -19,52 +19,54 @@
     @endif
 </head>
 
-<body
-    class="bg-[#CDE6F4] dark:bg-[#0a0a0a] text-[#333333] flex p-6 lg:p-8 items-center lg:justify-start min-h-screen flex-col">
+<body class="bg-[#CDE6F4] dark:bg-[#0a0a0a] text-[#333333] flex items-center lg:justify-start min-h-screen flex-col">
 
     {{-- ヘッダー --}}
-    <header class="fixed w-full lg:max-w-4xl max-w-[480px] text-sm mb-6 not-has-[nav]:hidden">
+    <header class="bg-[#FFFFFF] fixed flex justify-center items-center w-full h-20 top-0">
+        <div class="w-full h-auto lg:max-w-4xl max-w-[480px] text-sm  not-has-[nav]:hidden">
 
-        @if (Route::has('login'))
+            @if (Route::has('login'))
 
-            {{-- メニュー --}}
-            <nav class="flex items-center justify-between gap-4">
+                {{-- メニュー --}}
+                <nav class="flex items-center justify-between gap-4">
 
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-
-                <!-- links -->
-                <div>
-                    @auth
-                        <a href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                            Dashboard
+                    <!-- Logo -->
+                    <div class="shrink-0 flex items-center">
+                        <a href="{{ route('dashboard') }}">
+                            <x-application-logo
+                                class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                         </a>
-                    @else
-                        <a href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal">
-                            Log in
-                        </a>
+                    </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}"
+                    <!-- links -->
+                    <div>
+                        @auth
+                            <a href="{{ url('/dashboard') }}"
                                 class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
+                                Dashboard
                             </a>
-                        @endif
-                    @endauth
-                </div>
+                        @else
+                            <a href="{{ route('login') }}"
+                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal">
+                                Log in
+                            </a>
 
-            </nav>
-        @endif
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}"
+                                    class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                                    Register
+                                </a>
+                            @endif
+                        @endauth
+                    </div>
+
+                </nav>
+            @endif
+        </div>
     </header>
 
 
-    <main class="flex-1 mt-24 lg:max-w-4xl max-w-[480px]">
+    <main class="flex-1 mt-24 lg:max-w-4xl max-w-[480px] p-6 lg:p-8 ">
 
         {{-- 挨拶エリア --}}
         <section class="welcome-intro flex flex-col items-center">
@@ -73,11 +75,15 @@
                 <span class="welcome-intro__title-parts">{{ __('（ポートフォリオデモ）') }}</span>
             </h1>
 
-            <span class="bg-white/80 inline-block mt-12 px-8 text-xl text-center">
+            <span class="welcome-intro__message inline-block mt-12 px-8 py-3 text-xl text-center">
                 {{ __('ようこそ、口コミ投稿サイト体験版へ') }}
             </span>
 
-            <p>{{ __('このサイトはポートフォリオ用に制作したデモサイトです。') }}</p>
+            <div class="welcome-intro__description">
+                <p>{{ __('このサイトはポートフォリオ用に制作したデモサイトです。') }}</p>
+
+                <p>{{ __('ご自由に機能をお試しください。') }}</p>
+            </div>
         </section>
 
         {{-- ログイン・新規作成ボタンエリア --}}
@@ -93,7 +99,7 @@
 
     </main>
 
-    <footer class="w-full lg:max-w-4xl max-w-[480px] mt-24 text-ms text-center">
+    <footer class="bg-[#FFFFFF] w-full p-4 text-ms text-center">
         {{ __('© 2026 Portfolio Demo') }}
     </footer>
 

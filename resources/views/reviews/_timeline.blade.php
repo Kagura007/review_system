@@ -2,7 +2,7 @@
 
 
 @push('styles')
-    @vite('resources/css/project/_time_line.css')
+    @vite('resources/css/project/time_line.css')
 @endpush
 
 <div class="p-review-list">
