@@ -30,25 +30,14 @@
                     {{ $userProfile->nick_name }}
                 @endif
             </div>
-            {{-- ユーザーID --}}
 
+            {{-- ユーザーID --}}
             <div class="p-user-profile__user-id">
                 {{ __('ユーザーID：') }}{{ $userProfile->file_name }}
             </div>
         </div>
 
-    </div>
-
-    {{-- 自己紹介＋フォローボタン --}}
-    <div class="p-user-profile__description-group">
-        <div class="p-user-profile__description">
-            @if (blank($userProfile->description))
-                {{ __('まだ自己紹介がありません') }}
-            @else
-                {{ $userProfile->description }}
-            @endif
-        </div>
-
+        {{-- フォローボタン --}}
         <div class="p-user-profile__btn-group">
 
             @if (Auth::id() !== $userProfile->user->id) {{-- 自分自身ではない場合 --}}
@@ -69,6 +58,16 @@
             @endif
 
         </div>
+
+    </div>
+
+    {{-- 自己紹介 --}}
+    <div class="p-user-profile__description">
+        @if (blank($userProfile->description))
+            {{ __('まだ自己紹介がありません') }}
+        @else
+            {{ $userProfile->description }}
+        @endif
     </div>
 
 </section>

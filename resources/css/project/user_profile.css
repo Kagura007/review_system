@@ -36,12 +36,12 @@
     font-size: 0.9rem;
 }
 
-.p-user-profile__description-group {
+.p-user-profile__description {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 
