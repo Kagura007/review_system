@@ -1,3 +1,10 @@
+{{-- タイムラインの構造 --}}
+
+
+@push('styles')
+    @vite('resources/css/project/_time_line.css')
+@endpush
+
 <div class="p-review-list">
 
     <div class="p-review-list__inner">

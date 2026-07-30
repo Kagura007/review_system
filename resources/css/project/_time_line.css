@@ -1,0 +1,21 @@
+/* タイムラインがディスプレイ600px以下のスタイル */
+
+
+/* ディスプレイ600px以下 */
+@media screen and (max-width: 600px) {
+
+    /* 投稿内容 */
+    .p-timeline__item {
+        background-color: #e3eef4;
+        grid-template-columns: 140px minmax(0, 1fr);
+        grid-template-areas:
+            "date    user"
+            "content content"
+            "button  button"
+            "comment comment";
+        gap: 20px;
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+        border-radius: 2rem;
+    }
+}

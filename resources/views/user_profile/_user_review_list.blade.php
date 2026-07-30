@@ -1,5 +1,6 @@
 {{-- プロフィール画面のユーザー投稿一覧 --}}
 
+
 {{-- 切り替えタブエリア --}}
 <div class="p-user-profile__tab-group {{ Auth::id() === $userProfile->user->id ? 'is-owner' : 'is-other-user' }}">
     <button class="p-user-profile__tab  p-user-profile__tab--active">
@@ -53,8 +54,10 @@
                     </div>
                 </div>
 
+                {{-- ボタンエリア --}}
                 @if (Auth::id() === $review->user_id)
                     <div class="p-review-list__button-group">
+                        {{-- 編集ボタン --}}
                         <a href="{{ route('reviews.edit', $review->id) }}" class="c-button p-review-list__button">
                             {{ __('編集する') }}
                         </a>
@@ -68,7 +71,7 @@
                             @method('DELETE')
 
                             <button type="submit" class="c-button p-review-list__button-comment">
-                                {{ __('このレビューを削除する') }}
+                                {{ __('レビューを削除する') }}
                             </button>
                         </form>
                     </div>

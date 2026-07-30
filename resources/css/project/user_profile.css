@@ -1,4 +1,6 @@
-/* プロフィールページ */
+/* --- プロフィールページ --- */
+
+
 .p-profile {
     position: relative;
     padding-block: 3rem;
@@ -70,7 +72,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 2rem;
-    width: 20rem;
+    max-width: 20rem;
 }
 
 
@@ -78,13 +80,14 @@
 .p-user-profile__tab {
     background-color: transparent;
     flex: 1;
-    padding-inline: 1rem;
+    padding-inline: clamp(0.5rem, 2vw, 1rem);
     padding-block: 0.5rem;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: none;
     color: var(--color-text-secondary);
+    font-size: 0.9rem;
     cursor: pointer;
 }
 
@@ -114,7 +117,7 @@
 .p-user-profile__tab-content {
     background-color: #e3eef4;
     margin-block: 2rem;
-    padding: 2rem;
+    padding: clamp(1rem, 2vw, 2rem);
     border-radius: 2rem;
 }
 
@@ -144,4 +147,32 @@
 
 #favorite-empty {
     text-align: center;
+}
+
+
+/* ディスプレイ600px以下 */
+@media screen and (max-width: 600px) {
+    .p-profile {
+        padding-top: 0;
+        padding-bottom: 3rem;
+        padding-inline: 1rem;
+    }
+
+    .p-timeline__item+.p-timeline__item {
+        margin-top: 4rem;
+    }
+
+    /* ボタンエリア */
+    .p-review-list__button-group {
+        justify-content: center;
+        ;
+    }
+
+    .p-user-profile__button--favorite {
+        grid-area: button;
+    }
+
+    .c-button {
+        font-size: 0.9rem;
+    }
 }
