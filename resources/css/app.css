@@ -5,7 +5,6 @@
 @import "./project/welcome.css";
 @import "./project/review_form.css";
 @import "./project/review_list.css";
-/* @import "./project/comment_form.css"; */
 @import "./project/comment.css";
 @import "./project/user_profile.css";
 @import "./project/help.css";
@@ -17,8 +16,5 @@
 html {
     /* プロフィールページのタブ切り替えでスクロールバーの分画面が動いてしまうのを防ぐ */
     overflow-y: scroll;
-}
-
-body {
-    min-height: 100vh;
+    scroll-behavior: smooth;
 }

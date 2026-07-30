@@ -86,3 +86,30 @@
         transform: translate(-50%, -20px);
     }
 }
+
+/* トップへ戻るボタン */
+.back-to-top {
+    background-color: #cececed5;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 1rem;
+    bottom: 2rem;
+    border-radius: 50%;
+    color: #666666bd;
+    box-shadow: 0 0 5px #cecece;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .3s ease, transform .3s ease, visibility .3s;
+    z-index: 9999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

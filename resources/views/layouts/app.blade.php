@@ -43,6 +43,11 @@
             {{ $slot }}
         </main>
 
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <div class="back-to-top__image">▲</div>
+        </a>
+
         <!-- Page Footer -->
         <footer class="bg-[#FFFFFF] w-full mt-16 p-4 text-ms text-center text-[#777777]">
             {{ __('© 2026 Portfolio Demo') }}

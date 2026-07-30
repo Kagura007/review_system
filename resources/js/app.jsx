@@ -1,5 +1,6 @@
 import './bootstrap';
 import './user-profile';
+import './backToTop';
 
 import Alpine from 'alpinejs';
 
@@ -14,15 +15,6 @@ import { createRoot } from 'react-dom/client';
 import Favorite from './components/Favorite';
 
 
-// const elements = document.querySelectorAll('.favorite-app');
-
-// elements.forEach((element) => {
-
-//     createRoot(element).render(
-//         <Favorite postId={element.dataset.postId} />
-//     );
-
-// });
 
 // Reactのマウント処理
 const elements = document.querySelectorAll('.favorite-app');
