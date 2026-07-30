@@ -7,7 +7,7 @@
         <div class="l-container p-review-form__inner">
 
             <h1 class="p-review-form__title">
-                {{ __('Edit review') }}
+                {{ __('Edit Review') }}
             </h1>
 
             <p>

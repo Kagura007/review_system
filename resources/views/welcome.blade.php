@@ -19,7 +19,7 @@
     @endif
 </head>
 
-<body class="bg-[#CDE6F4] dark:bg-[#0a0a0a] text-[#333333] flex items-center lg:justify-start min-h-screen flex-col">
+<body class="bg-[#CDE6F4] dark:bg-[#0a0a0a] text-[#333333] flex items-center lg:justify-start flex-col">
 
     {{-- ヘッダー --}}
     <header class="bg-[#FFFFFF] fixed flex justify-center items-center w-full h-16 top-0">

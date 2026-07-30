@@ -18,3 +18,7 @@ html {
     /* プロフィールページのタブ切り替えでスクロールバーの分画面が動いてしまうのを防ぐ */
     overflow-y: scroll;
 }
+
+body {
+    min-height: 100vh;
+}
