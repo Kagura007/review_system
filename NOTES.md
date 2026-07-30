@@ -59,6 +59,8 @@ C:\xampp\htdocs\review_system\resources\views\user_profile\show.blade.php
 
 ## 工夫した点
 
+### welcome.blade.php では Tailwind を導入
+
 ### gridを使用（resources > css > review_timeline.css）
 タイムラインの投稿データはgridレイアウトを使用
 

@@ -42,6 +42,11 @@
         <main>
             {{ $slot }}
         </main>
+
+        <!-- Page Footer -->
+        <footer class="bg-[#FFFFFF] w-full mt-16 p-4 text-ms text-center text-[#777777]">
+            {{ __('© 2026 Portfolio Demo') }}
+        </footer>
     </div>
 </body>
 
