@@ -8,6 +8,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.jsx',
+                'resources/css/project/time_line.css',
             ],
             refresh: true,
         }),
