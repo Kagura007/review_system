@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/js/app.jsx',
                 'resources/css/project/time_line.css',
                 'resources/css/project/review_form.css',
+                'resources/css/project/comment_form.css',
             ],
             refresh: true,
         }),
