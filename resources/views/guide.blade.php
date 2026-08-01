@@ -22,7 +22,8 @@
             <ul class="p-guide__list">
                 <li class="p-guide__item">レビュー・コメントを投稿できます。</li>
                 <li class="p-guide__item">レビュー・コメントは合計10件まで投稿できます。</li>
-                <li class="p-guide__item">投稿した内容は削除できます。</li>
+                <li class="p-guide__item">投稿したレビューは削除できます。</li>
+                <li class="p-guide__item">投稿したコメントの削除機能はまだ実装されていません。</li>
                 <li class="p-guide__item">投稿内容は他の利用者にも公開されます。</li>
             </ul>
         </section>
@@ -34,6 +35,7 @@
                 <li class="p-guide__item">宣伝・スパム投稿は禁止です。</li>
                 <li class="p-guide__item">不適切な内容は削除する場合があります。</li>
                 <li class="p-guide__item">一部の不適切な表現は投稿できません。</li>
+                <li class="p-guide__item">デモサイトなので、予告なく投稿内容を削除することがあります。</li>
             </ul>
         </section>
 

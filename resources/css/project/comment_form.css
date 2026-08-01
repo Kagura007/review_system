@@ -23,16 +23,19 @@
 
 .p-comment-form__textarea-group {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: auto;
+}
+
+.p-comment-form__error {
+    align-self: flex-start;
 }
 
 .p-comment-form__textarea {
     width: 100%;
 }
+
 
 .p-comment-form__button {
     margin-left: auto;
