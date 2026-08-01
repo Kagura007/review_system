@@ -1,5 +1,10 @@
 {{-- レビュー編集フォーム --}}
 
+
+@push('styles')
+    @vite('resources/css/project/review_form.css')
+@endpush
+
 <section class="p-review-form__form-content">
 
     <form action="{{ route('reviews.update', $post->id) }}" method="POST" class="p-review-form__form">

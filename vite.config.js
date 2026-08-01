@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.jsx',
                 'resources/css/project/time_line.css',
+                'resources/css/project/review_form.css',
             ],
             refresh: true,
         }),
